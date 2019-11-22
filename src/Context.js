@@ -17,7 +17,11 @@ class ProfilesProvider extends Component {
     componentDidMount(){
         // this.getDATA
         let profiles = this.formatData(items);
-        console.log(profiles);
+        let featuredProfiles = profiles.filter(profile => profile.featured === true);
+        this.setState({
+            profiles, featuredProfiles, sortedProfiles:profiles, loading:false
+        })
+        // console.log(profiles);
     }
 
     formatData(items){
