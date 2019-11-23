@@ -17,6 +17,7 @@ function App() {
       <Route exact path='/' component={Home} />
       <Route exact path='/profiles' component={ProfilesPage} />
       <Route exact path='/profiles/:slug' component={SingleProfilePage} />
+      <Route exact path='/companies' component={ProfilesPage} />
       <Route component={ErrorPage} />
       </Switch>
     </>

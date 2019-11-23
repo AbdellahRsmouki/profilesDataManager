@@ -1,29 +1,31 @@
 import React, { Component } from 'react'
 import Title from './Title';
-import { FaCocktail, FaHiking, FaShuttleVan, FaBeer} from 'react-icons/fa';
+import { FaCalendarAlt} from 'react-icons/fa';
+import {MdAccessibility, MdPersonAdd} from 'react-icons/md';
+import {GiStairsGoal} from 'react-icons/gi';
 
 export default class Services extends Component {
     state={
         Services:[
             {
-                icon:<FaCocktail />,
-                title: "cocktail",
-                info: "some infos about cocktail"
+                icon:<MdAccessibility />,
+                title: "Accessebility",
+                info: "Easy access to useful data"
             },
             {
-                icon:<FaHiking />,
-                title: "Hicking",
-                info: "some infos about Hicking"
+                icon:<MdPersonAdd />,
+                title: "Grow Your Professional Network",
+                info: "ENSIAS Laureats together the biggest IT community in Morocco"
             },
             {
-                icon:<FaShuttleVan />,
-                title: "Van",
-                info: "some infos about Van"
+                icon:<GiStairsGoal />,
+                title: "strategy & organization",
+                info: "inspire from the best profiles to meet your goals"
             },
             {
-                icon:<FaBeer />,
-                title: "Beer",
-                info: "some infos about Beer"
+                icon:<FaCalendarAlt />,
+                title: "News",
+                info: "Be the first to hear about conferences and workshops inside ENSIAS"
             }
         ]
     }
