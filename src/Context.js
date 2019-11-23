@@ -56,14 +56,24 @@ class ProfilesProvider extends Component {
     }
 
     handleChange = event =>{
-        const type = event.target.type;
+        const target = event.target;
+        const value = event.type === 'checkbox' ?
+        target.checked:target.value;
         const name = event.target.name;
-        const value = event.target.value;
-        console.log(type, name, value)
+        this.setState({
+            [name]:value
+        },this.filterProfiles);
     }
 
     filterProfiles = () => {
-        console.log('hello')
+        let {profiles,type, capacity, price, minSize, maxSize,breakfast, pets} = this.state;
+        let tempProfiles = [...profiles];
+        if(type!=='all'){
+            tempProfiles = tempProfiles.filter(profile=>profile.type===type)
+        }
+        this.setState({
+            sortedProfiles:tempProfiles
+        });
     }
 
     render() {
