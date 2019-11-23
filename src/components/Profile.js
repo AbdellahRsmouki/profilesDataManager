@@ -1,8 +1,9 @@
 import React from 'react'
 
 import defaultImg from '../images/room-1.jpeg';
+
 import {Link} from 'react-router-dom';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 export default function Profile({profile}) {
     // console.log(profile);

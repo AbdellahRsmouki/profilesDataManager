@@ -37,14 +37,22 @@ class ProfilesProvider extends Component {
         return tempItems;
     }
 
+    getProfile = (slug) =>{
+        let tempProfiles = [...this.state.profiles];
+        const profile = tempProfiles.find(profile => profile.slug === slug);
+        return profile;
+    }
+
     render() {
         return (
-            <ProfileContext.Provider value={{...this.state}}>
+            <ProfileContext.Provider value={{...this.state, getProfile: this.getProfile}}>
                 {this.props.children}
             </ProfileContext.Provider>
         ) 
     }
 }
+
+
 
 const ProfileConsumer = ProfileContext.Consumer;
 
