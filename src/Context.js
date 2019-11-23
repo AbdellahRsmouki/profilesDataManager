@@ -9,7 +9,16 @@ class ProfilesProvider extends Component {
         profiles:[],
         sortedProfiles:[],
         featuredProfiles:[],
-        loading:true
+        loading:true,
+        type:'all',
+        capacity:1,
+        price:0,
+        minPrice:0,
+        maxPrice:0,
+        minSize:0,
+        maxSize:0,
+        breakfast:false,
+        pet:false
     }
 
     // GETDATA
@@ -18,8 +27,11 @@ class ProfilesProvider extends Component {
         // this.getDATA
         let profiles = this.formatData(items);
         let featuredProfiles = profiles.filter(profile => profile.featured === true);
+        let maxPrice = Math.max(...profiles.map(item=>item.price));
+        let maxSize = Math.max(...profiles.map(item=>item.size));
         this.setState({
-            profiles, featuredProfiles, sortedProfiles:profiles, loading:false
+            profiles, featuredProfiles, sortedProfiles:profiles, loading:false,
+            price: maxPrice, maxPrice, maxSize
         })
         // console.log(profiles);
     }
@@ -43,9 +55,25 @@ class ProfilesProvider extends Component {
         return profile;
     }
 
+    handleChange = event =>{
+        const type = event.target.type;
+        const name = event.target.name;
+        const value = event.target.value;
+        console.log(type, name, value)
+    }
+
+    filterProfiles = () => {
+        console.log('hello')
+    }
+
     render() {
         return (
-            <ProfileContext.Provider value={{...this.state, getProfile: this.getProfile}}>
+            <ProfileContext.Provider 
+                value={{
+                    ...this.state,
+                    getProfile: this.getProfile,
+                    handleChange: this.handleChange
+                }}>
                 {this.props.children}
             </ProfileContext.Provider>
         ) 
@@ -55,5 +83,15 @@ class ProfilesProvider extends Component {
 
 
 const ProfileConsumer = ProfileContext.Consumer;
+
+export function WithProfileConsumer(Component){
+    return function ConsumerWrapper(props){
+        return <ProfileConsumer>
+            {
+                value => <Component {...props} context={value} />
+            }
+        </ProfileConsumer>
+    }
+}
 
 export{ProfileConsumer, ProfilesProvider, ProfileContext};
