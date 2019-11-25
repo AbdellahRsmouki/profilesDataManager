@@ -4,7 +4,7 @@ import './App.css';
 import Home from './pages/Home';
 import SingleProfilePage from './pages/SingleProfile';
 import ErrorPage from './pages/Error';
-import ProfilesPage from './pages/profiles';
+import ProfilesPage from './pages/Companies';
 
 import {Route, Switch} from 'react-router-dom';
 
