@@ -1,17 +1,19 @@
-class LoginPage extends React.Component {
+import React, { Component } from 'react'
+
+export default class RegisterComponent extends React.Component {
 
     constructor(props) {
       super(props);
       this.state = {};
     }
   
-    submitLogin(e) {}
+    submitRegister(e) {}
   
     render() {
       return (
         <div className="inner-container">
           <div className="header">
-            Login
+            Register
           </div>
           <div className="box">
   
@@ -25,6 +27,11 @@ class LoginPage extends React.Component {
             </div>
   
             <div className="input-group">
+              <label htmlFor="email">Email</label>
+              <input type="text" name="email" className="login-input" placeholder="Email"/>
+            </div>
+  
+            <div className="input-group">
               <label htmlFor="password">Password</label>
               <input
                 type="password"
@@ -32,16 +39,14 @@ class LoginPage extends React.Component {
                 className="login-input"
                 placeholder="Password"/>
             </div>
-  
             <button
               type="button"
               className="login-btn"
               onClick={this
-              .submitLogin
-              .bind(this)}>Login</button>
+              .submitRegister
+              .bind(this)}>Register</button>
           </div>
         </div>
       );
     }
-  
   }

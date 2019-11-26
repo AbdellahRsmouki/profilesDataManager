@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import SingleProfilePage from './pages/SingleProfile';
 import ErrorPage from './pages/Error';
 import ProfilesPage from './pages/Companies';
+import AuthenPage from './pages/AuthenPage';
 
 import {Route, Switch} from 'react-router-dom';
 
@@ -14,6 +15,7 @@ function App() {
     <>
     <Navbar />
     <Switch>
+      <Route exact path='/auth' component={AuthenPage} />
       <Route exact path='/' component={Home} />
       <Route exact path='/profiles' component={ProfilesPage} />
       <Route exact path='/profiles/:slug' component={SingleProfilePage} />
