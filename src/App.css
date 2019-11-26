@@ -117,6 +117,9 @@ h6 {
   transition: var(--mainTransition);
   list-style-type: none;
 }
+.to-side {
+  float: right;
+}
 .nav-links a {
   display: block;
   text-decoration: none;
@@ -372,6 +375,11 @@ h6 {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-row-gap: 2rem;
   grid-column-gap: 50px;
+}
+.logo-image {
+  width: 50px;
+  display: block;
+  display: grid;
 }
 .single-room-images img {
   width: 100%;
