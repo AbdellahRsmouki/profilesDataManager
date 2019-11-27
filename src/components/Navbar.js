@@ -41,14 +41,14 @@ export default class Navbar extends Component {
                         <li>
                             <Link to="/companies">Companies</Link>
                         </li>
-                    </ul>
-                    <ul class="nav-links show-nav">
-                        <li>
-                            <Link className="to-side" to="/login">Sign in</Link>
-                        </li>
-                        <li>
-                            <Link className="to-side" to="/logout">Sign out</Link>
-                        </li>
+                        <ul class="nav-links show-nav">
+                            <li>
+                                <Link  to="/login">Sign in</Link>
+                            </li>
+                            <li>
+                                <Link  to="/logout">Sign out</Link>
+                            </li>
+                        </ul>
                     </ul>
                 </div>
             </nav>

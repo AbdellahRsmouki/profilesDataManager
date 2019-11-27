@@ -11,11 +11,19 @@ import {Route, Switch} from 'react-router-dom';
 
 import Navbar from './components/Navbar'
 function App() {
+
+  if(false){
+    return(
+      <Switch>
+        <Route component={AuthenPage} />
+      </Switch>
+    )
+  }
+
   return ( 
     <>
     <Navbar />
     <Switch>
-      <Route exact path='/auth' component={AuthenPage} />
       <Route exact path='/' component={Home} />
       <Route exact path='/profiles' component={ProfilesPage} />
       <Route exact path='/profiles/:slug' component={SingleProfilePage} />
