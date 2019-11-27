@@ -1,760 +1,534 @@
 import room1 from "./images/details-1.jpeg";
-import room2 from "./images/details-2.jpeg";
-import room3 from "./images/details-3.jpeg";
-import room4 from "./images/details-4.jpeg";
-import img1 from "./images/room-1.jpeg";
-import img2 from "./images/room-2.jpeg";
-import img3 from "./images/room-3.jpeg";
-import img4 from "./images/room-4.jpeg";
-import img5 from "./images/room-5.jpeg";
-import img6 from "./images/room-6.jpeg";
-import img7 from "./images/room-7.jpeg";
-import img8 from "./images/room-8.jpeg";
-import img9 from "./images/room-9.jpeg";
-import img10 from "./images/room-10.jpeg";
-import img11 from "./images/room-11.jpeg";
-import img12 from "./images/room-12.jpeg";
 
-export default [
-  {
-    sys: {
-      id: "1"
-    },
-    fields: {
-      name: "single economy",
-      slug: "single-economy",
-      type: "single",
-      price: 100,
-      size: 200,
-      capacity: 1,
-      pets: false,
-      breakfast: false,
-      featured: false,
-      description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-      extras: [
-        "Plush pillows and breathable bed linens",
-        "Soft, oversized bath towels",
-        "Full-sized, pH-balanced toiletries",
-        "Complimentary refreshments",
-        "Adequate safety/security",
-        "Internet",
-        "Comfortable beds"
-      ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img1
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
-          }
-        }
-      ]
-    }
-  },
-  {
-    sys: {
-      id: "2"
-    },
-    fields: {
-      name: "single basic",
-      slug: "single-basic",
-      type: "single",
-      price: 150,
-      size: 250,
-      capacity: 1,
-      pets: false,
-      breakfast: false,
-      featured: false,
-      description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-      extras: [
-        "Plush pillows and breathable bed linens",
-        "Soft, oversized bath towels",
-        "Full-sized, pH-balanced toiletries",
-        "Complimentary refreshments",
-        "Adequate safety/security",
-        "Internet",
-        "Comfortable beds"
-      ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
-          }
-        }
-      ]
-    }
-  },
-  {
-    sys: {
-      id: "3"
-    },
-    fields: {
-      name: "single standard",
-      slug: "single-standard",
-      type: "single",
-      price: 250,
-      size: 300,
-      capacity: 1,
-      pets: true,
-      breakfast: false,
-      featured: false,
-      description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-      extras: [
-        "Plush pillows and breathable bed linens",
-        "Soft, oversized bath towels",
-        "Full-sized, pH-balanced toiletries",
-        "Complimentary refreshments",
-        "Adequate safety/security",
-        "Internet",
-        "Comfortable beds"
-      ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
-          }
-        }
-      ]
-    }
-  },
-  {
-    sys: {
-      id: "4"
-    },
-    fields: {
-      name: "single deluxe",
-      slug: "single-deluxe",
-      type: "single",
-      price: 300,
-      size: 400,
-      capacity: 1,
-      pets: true,
-      breakfast: true,
-      featured: false,
-      description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-      extras: [
-        "Plush pillows and breathable bed linens",
-        "Soft, oversized bath towels",
-        "Full-sized, pH-balanced toiletries",
-        "Complimentary refreshments",
-        "Adequate safety/security",
-        "Internet",
-        "Comfortable beds"
-      ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img4
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
-          }
-        }
-      ]
-    }
-  },
-  {
-    sys: {
-      id: "5"
-    },
-    fields: {
-      name: "double economy",
-      slug: "double-economy",
-      type: "double",
-      price: 200,
-      size: 300,
-      capacity: 2,
-      pets: false,
-      breakfast: false,
-      featured: false,
-      description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-      extras: [
-        "Plush pillows and breathable bed linens",
-        "Soft, oversized bath towels",
-        "Full-sized, pH-balanced toiletries",
-        "Complimentary refreshments",
-        "Adequate safety/security",
-        "Internet",
-        "Comfortable beds"
-      ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img5
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
-          }
-        }
-      ]
-    }
-  },
-  {
-    sys: {
-      id: "6"
-    },
-    fields: {
-      name: "double basic",
-      slug: "double-basic",
-      type: "double",
-      price: 250,
-      size: 350,
-      capacity: 2,
-      pets: false,
-      breakfast: false,
-      featured: false,
-      description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-      extras: [
-        "Plush pillows and breathable bed linens",
-        "Soft, oversized bath towels",
-        "Full-sized, pH-balanced toiletries",
-        "Complimentary refreshments",
-        "Adequate safety/security",
-        "Internet",
-        "Comfortable beds"
-      ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img6
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
-          }
-        }
-      ]
-    }
-  },
-  {
-    sys: {
-      id: "7"
-    },
-    fields: {
-      name: "double standard",
-      slug: "double-standard",
-      type: "double",
-      price: 300,
-      size: 400,
-      capacity: 2,
-      pets: true,
-      breakfast: false,
-      featured: false,
-      description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-      extras: [
-        "Plush pillows and breathable bed linens",
-        "Soft, oversized bath towels",
-        "Full-sized, pH-balanced toiletries",
-        "Complimentary refreshments",
-        "Adequate safety/security",
-        "Internet",
-        "Comfortable beds"
-      ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img7
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
-          }
-        }
-      ]
-    }
-  },
-  {
-    sys: {
-      id: "8"
-    },
-    fields: {
-      name: "double deluxe",
-      slug: "double-deluxe",
-      type: "double",
-      price: 400,
-      size: 500,
-      capacity: 2,
-      pets: true,
-      breakfast: true,
-      featured: true,
-      description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-      extras: [
-        "Plush pillows and breathable bed linens",
-        "Soft, oversized bath towels",
-        "Full-sized, pH-balanced toiletries",
-        "Complimentary refreshments",
-        "Adequate safety/security",
-        "Internet",
-        "Comfortable beds"
-      ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img8
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
-          }
-        }
-      ]
-    }
-  },
-  {
-    sys: {
-      id: "9"
-    },
-    fields: {
-      name: "family economy",
-      slug: "family-economy",
-      type: "family",
-      price: 300,
-      size: 500,
-      capacity: 3,
-      pets: false,
-      breakfast: false,
-      featured: false,
-      description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-      extras: [
-        "Plush pillows and breathable bed linens",
-        "Soft, oversized bath towels",
-        "Full-sized, pH-balanced toiletries",
-        "Complimentary refreshments",
-        "Adequate safety/security",
-        "Internet",
-        "Comfortable beds"
-      ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img9
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
-          }
-        }
-      ]
-    }
-  },
-  {
-    sys: {
-      id: "10"
-    },
-    fields: {
-      name: "family basic",
-      slug: "family-basic",
-      type: "family",
-      price: 350,
-      size: 550,
-      capacity: 4,
-      pets: false,
-      breakfast: false,
-      featured: false,
-      description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-      extras: [
-        "Plush pillows and breathable bed linens",
-        "Soft, oversized bath towels",
-        "Full-sized, pH-balanced toiletries",
-        "Complimentary refreshments",
-        "Adequate safety/security",
-        "Internet",
-        "Comfortable beds"
-      ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img10
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
-          }
-        }
-      ]
-    }
-  },
-  {
-    sys: {
-      id: "11"
-    },
-    fields: {
-      name: "family standard",
-      slug: "family-standard",
-      type: "family",
-      price: 400,
-      size: 600,
-      capacity: 5,
-      pets: true,
-      breakfast: false,
-      featured: false,
-      description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-      extras: [
-        "Plush pillows and breathable bed linens",
-        "Soft, oversized bath towels",
-        "Full-sized, pH-balanced toiletries",
-        "Complimentary refreshments",
-        "Adequate safety/security",
-        "Internet",
-        "Comfortable beds"
-      ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img11
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
-          }
-        }
-      ]
-    }
-  },
-  {
-    sys: {
-      id: "12"
-    },
-    fields: {
-      name: "family deluxe",
-      slug: "family-deluxe",
-      type: "family",
-      price: 500,
-      size: 700,
-      capacity: 6,
-      pets: true,
-      breakfast: true,
-      featured: true,
-      description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-      extras: [
-        "Plush pillows and breathable bed linens",
-        "Soft, oversized bath towels",
-        "Full-sized, pH-balanced toiletries",
-        "Complimentary refreshments",
-        "Adequate safety/security",
-        "Internet",
-        "Comfortable beds"
-      ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: img12
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
-          }
-        }
-      ]
-    }
-  },
-  {
-    sys: {
-      id: "13"
-    },
-    fields: {
-      name: "presidential",
-      slug: "presidential-room",
-      type: "presidential",
-      price: 600,
-      size: 1000,
-      capacity: 10,
-      pets: true,
-      breakfast: true,
-      featured: true,
-      description:
-        "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-      extras: [
-        "Plush pillows and breathable bed linens",
-        "Soft, oversized bath towels",
-        "Full-sized, pH-balanced toiletries",
-        "Complimentary refreshments",
-        "Adequate safety/security",
-        "Internet",
-        "Comfortable beds"
-      ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: room1
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room2
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room3
-            }
-          }
-        },
-        {
-          fields: {
-            file: {
-              url: room4
-            }
-          }
-        }
-      ]
-    }
-  }
-];
+export default room1;
+export default items = [
+	{
+		"nom": "ahadri",
+		"prenom": "hatim",
+		"promo": "2017",
+		"ville": "paris",
+		"pays": "France",
+		"entreprise/université": "BNP Paris bas",
+		"poste": "Full Stack Consultant ",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/hatim-ahadri/"
+	},
+	{
+		"nom": "ahmadoun",
+		"prenom": "douae",
+		"promo": "2017",
+		"ville": "paris",
+		"pays": "France",
+		"entreprise/université": "Université Paris Descartes",
+		"poste": "Phd student",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/douae-ahmadoun/"
+	},
+	{
+		"nom": "alehyen",
+		"prenom": "Ismail",
+		"promo": "2017",
+		"ville": "Rabat",
+		"pays": "Maroc",
+		"entreprise/université": "Quinten",
+		"poste": "Software Engineer",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/ismail-alehyen/"
+	},
+	{
+		"nom": "allak",
+		"prenom": "Aymane Khalid ",
+		"promo": "2017",
+		"ville": "paris",
+		"pays": "France",
+		"entreprise/université": "Gfi informatique",
+		"poste": "Software Engineer",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/aymane-khalid-allak-93495711a/"
+	},
+	{
+		"nom": "amal",
+		"prenom": "El mahdi",
+		"promo": "2017",
+		"ville": "casablanca",
+		"pays": "Maroc",
+		"entreprise/université": "Payment Center For Africa ",
+		"poste": "Full Stack Developer",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/el-mehdi-amal-17bb09133/"
+	},
+	{
+		"nom": "amine",
+		"prenom": "rida",
+		"promo": "2017",
+		"ville": "casablanca",
+		"pays": "Maroc",
+		"entreprise/université": "Akka Technologies",
+		"poste": "Team Lead",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/rida-amine-33ba8ba8/"
+	},
+	{
+		"nom": "amine",
+		"prenom": "taha",
+		"promo": "2017",
+		"ville": "casablanca",
+		"pays": "Maroc",
+		"entreprise/université": "Akka Technologies",
+		"poste": "Software Engineer",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/taha-amine-10731b115/"
+	},
+	{
+		"nom": "arajoum",
+		"prenom": "ilyasse",
+		"promo": "2017",
+		"ville": "paris",
+		"pays": "France",
+		"entreprise/université": "VINCI Autoroutes",
+		"poste": "DevOps engineer",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/ilyasse-arajoum-7b115610b/"
+	},
+	{
+		"nom": "arrad",
+		"prenom": "Hamza",
+		"promo": "2017",
+		"ville": "casablanca",
+		"pays": "Maroc",
+		"entreprise/université": "Gfi informatique",
+		"poste": "Java/Java EE Consultant",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/arrad-hamza-125683a0/"
+	},
+	{
+		"nom": "arzmi",
+		"prenom": "imad",
+		"promo": "2017",
+		"ville": "casablanca",
+		"pays": "Maroc",
+		"entreprise/université": "OCP",
+		"poste": "Full Stack Developer",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/arzmi-imad-83235a116/"
+	},
+	{
+		"nom": "azouggarh",
+		"prenom": "chaymae",
+		"promo": "2017",
+		"ville": "casablanca",
+		"pays": "Maroc",
+		"entreprise/université": "OCP",
+		"poste": "Financial Digitization Analyst",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/chaymae-azouggarh-a76a73116/"
+	},
+	{
+		"nom": "azaroual",
+		"prenom": "anas",
+		"promo": "2017",
+		"ville": "casablanca",
+		"pays": "Maroc",
+		"entreprise/université": "Nimble Ways",
+		"poste": "Full Stack Developer",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/anas-azaroual-8556a4132/"
+	},
+	{
+		"nom": "baamrani",
+		"prenom": "khadija",
+		"promo": "2017",
+		"ville": "casablanca",
+		"pays": "Maroc",
+		"entreprise/université": "Harman international",
+		"poste": "Software Engineer",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/khadija-baamrani-b7b457121/"
+	},
+	{
+		"nom": "Bougarfaoui",
+		"prenom": "El Houcine ",
+		"promo": "2017",
+		"ville": "Rabat",
+		"pays": "Maroc",
+		"entreprise/université": "scale",
+		"poste": "Software Engineer",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/el-houcine-bougarfaoui-09a72b131/"
+	},
+	{
+		"nom": "boughti",
+		"prenom": "houssam",
+		"promo": "2017",
+		"ville": "Rabat",
+		"pays": "Maroc",
+		"entreprise/université": "SQLI",
+		"poste": "Software Engineer",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/houssam-boughti/"
+	},
+	{
+		"nom": "CHRIFI ALAOUI",
+		"prenom": "hakim",
+		"promo": "2017",
+		"ville": "casablanca",
+		"pays": "Maroc",
+		"entreprise/université": "OCTO Technologies",
+		"poste": "Consultant DevOps",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/hakimchrifialaoui/"
+	},
+	{
+		"nom": "daoudi",
+		"prenom": "wissal",
+		"promo": "2017",
+		"ville": "Rabat",
+		"pays": "Maroc",
+		"entreprise/université": "HP",
+		"poste": "Presales Technical Consultant",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/wissal-daoudi-4b07b6129/"
+	},
+	{
+		"nom": "el aasri",
+		"prenom": "aicha",
+		"promo": "2017",
+		"ville": "paris",
+		"pays": "France",
+		"entreprise/université": "Amaris",
+		"poste": "Consultant",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/aicha-el-aasri-b7477b123/"
+	},
+	{
+		"nom": "El aoula ",
+		"prenom": "fatima zahra",
+		"promo": "2017",
+		"ville": "paris",
+		"pays": "France",
+		"entreprise/université": "Dauphine",
+		"poste": "MIAGE student",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/fatima-zahra-el-aoula-a19195129/"
+	},
+	{
+		"nom": "el bouazzaoui",
+		"prenom": "wafaa",
+		"promo": "2017",
+		"ville": "paris",
+		"pays": "France",
+		"entreprise/université": "Dauphine",
+		"poste": "MIAGE student",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/wafaa-el-bouazzaoui-917270a8/"
+	},
+	{
+		"nom": "el massi ",
+		"prenom": "hamza",
+		"promo": "2017",
+		"ville": "casablanca",
+		"pays": "Maroc",
+		"entreprise/université": "Nimble Ways",
+		"poste": "Consultant JS",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/hamzaelmassi/"
+	},
+	{
+		"nom": "el meftouhi",
+		"prenom": "soufiane",
+		"promo": "2017",
+		"ville": "paris",
+		"pays": "France",
+		"entreprise/université": "BNP Paris bas",
+		"poste": "Tech Lead en Angular",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/soufian-el-meftouhi-ab183ba2/"
+	},
+	{
+		"nom": "el mesaoudi",
+		"prenom": "zakariae",
+		"promo": "2017",
+		"ville": "Rabat",
+		"pays": "Maroc",
+		"entreprise/université": "OCTO Technologies",
+		"poste": "Consultant IT",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/zakariae-el-mesaoudi-235890105/"
+	},
+	{
+		"nom": "elaffani",
+		"prenom": "marwa",
+		"promo": "2017",
+		"ville": "paris",
+		"pays": "France",
+		"entreprise/université": "Dauphine",
+		"poste": "MIAGE student",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/marwa-elaffani-566767a2/"
+	},
+	{
+		"nom": "enaija",
+		"prenom": "Abderrafiâ",
+		"promo": "2017",
+		"ville": "paris",
+		"pays": "France",
+		"entreprise/université": "Dataraise",
+		"poste": "Consultant Talend",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/abderrafi%C3%A2-enaija/"
+	},
+	{
+		"nom": "et-tayyeb",
+		"prenom": "walid",
+		"promo": "2017",
+		"ville": "paris",
+		"pays": "France",
+		"entreprise/université": "Groupe alties ",
+		"poste": "Consultant Mainframe-COBOL",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/walid-et-tayyeb-087a68124/"
+	},
+	{
+		"nom": "fadyl",
+		"prenom": "brahim",
+		"promo": "2017",
+		"ville": "casablanca",
+		"pays": "Maroc",
+		"entreprise/université": "Akka Technologies",
+		"poste": "lead developer",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/brahim-fadyl/"
+	},
+	{
+		"nom": "fliou",
+		"prenom": "salim",
+		"promo": "2017",
+		"ville": "montréal",
+		"pays": "canada",
+		"entreprise/université": "optimum solutions TI",
+		"poste": "Concepteur Développeur",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/salim-fliou-65a536b9/"
+	},
+	{
+		"nom": "gamrani",
+		"prenom": "hajar",
+		"promo": "2017",
+		"ville": "paris",
+		"pays": "France",
+		"entreprise/université": "Margo",
+		"poste": "Software Consultant",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/hajar-gamrani-201938a3/"
+	},
+	{
+		"nom": "hadouchi",
+		"prenom": "khalid",
+		"promo": "2017",
+		"ville": "Rabat",
+		"pays": "Maroc",
+		"entreprise/université": "Orange business maroc",
+		"poste": "Oracle ERP Cloud Software Engineer",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/khalid-haddouchi-236901a6/"
+	},
+	{
+		"nom": "Halim",
+		"prenom": "hanane",
+		"promo": "2017",
+		"ville": "casablanca",
+		"pays": "Maroc",
+		"entreprise/université": "Société Générale - CIB",
+		"poste": "Capital Market R&D Engineer",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/hhalim/"
+	},
+	{
+		"nom": "hamane",
+		"prenom": "ishaq",
+		"promo": "2017",
+		"ville": "casablanca",
+		"pays": "Maroc",
+		"entreprise/université": "Payment Center For Africa ",
+		"poste": "Full Stack Developer",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/ishaq-hamane-6b23a4127/"
+	},
+	{
+		"nom": "hanzaz ",
+		"prenom": "sophia",
+		"promo": "2017",
+		"ville": "Rabat",
+		"pays": "Maroc",
+		"entreprise/université": "Capgemini",
+		"poste": "Applications manager",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/sophia-hanzaz-86886a140/"
+	},
+	{
+		"nom": "ibn omar",
+		"prenom": "ismael",
+		"promo": "2017",
+		"ville": "paris",
+		"pays": "France",
+		"entreprise/université": "Natixis",
+		"poste": "Data Scientist",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/ismaelibnomar/"
+	},
+	{
+		"nom": "karnas",
+		"prenom": "anoir",
+		"promo": "2017",
+		"ville": "Rabat",
+		"pays": "Maroc",
+		"entreprise/université": "Capgemini",
+		"poste": "Ingénieur étude et développement",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/anoir-karnas-361a86119/"
+	},
+	{
+		"nom": "Massemoue",
+		"prenom": "imad",
+		"promo": "2017",
+		"ville": "casablanca",
+		"pays": "Maroc",
+		"entreprise/université": "Spacebyte AG",
+		"poste": "Software Engineer",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/imad-massemoue/"
+	},
+	{
+		"nom": "Moussaif",
+		"prenom": "ghassan",
+		"promo": "2017",
+		"ville": "paris",
+		"pays": "France",
+		"entreprise/université": "Margo",
+		"poste": "Java/Java EE Consultant",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/ghassanmoussaif/"
+	},
+	{
+		"nom": "naji amrani",
+		"prenom": "akram",
+		"promo": "2017",
+		"ville": "Rabat",
+		"pays": "Maroc",
+		"entreprise/université": "Synaptique Maghreb",
+		"poste": "Software Engineer",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/akram-naji-amrani-691376127/"
+	},
+	{
+		"nom": "nouar",
+		"prenom": "Oumaima",
+		"promo": "2017",
+		"ville": "paris",
+		"pays": "France",
+		"entreprise/université": "Audiense",
+		"poste": "Consultant",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/oumaima-nouar-4940bba6/"
+	},
+	{
+		"nom": "ouali",
+		"prenom": "mouad",
+		"promo": "2017",
+		"ville": "casablanca",
+		"pays": "Maroc",
+		"entreprise/université": "Société Générale - ATS",
+		"poste": "Financial markets research engineer",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/mouad-ouali-788493133/"
+	},
+	{
+		"nom": "oubella",
+		"prenom": "said",
+		"promo": "2017",
+		"ville": "Rabat",
+		"pays": "Maroc",
+		"entreprise/université": "DXC Technologies",
+		"poste": "Consultant Technico-Fonctionnel",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/said-oubella-349b40122/"
+	},
+	{
+		"nom": "rbigat",
+		"prenom": "Ismail",
+		"promo": "2017",
+		"ville": "casablanca",
+		"pays": "Maroc",
+		"entreprise/université": "Payment Center For Africa ",
+		"poste": "Full Stack Developer",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/ismail-rbigat-8463ab123/"
+	},
+	{
+		"nom": "samari",
+		"prenom": "fatima ezzahra",
+		"promo": "2017",
+		"ville": "paris",
+		"pays": "France",
+		"entreprise/université": "Ingenico Group",
+		"poste": "Consultante scala",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/fatiha-reja-58087611a/"
+	},
+	{
+		"nom": "srija",
+		"prenom": "mehdi",
+		"promo": "2017",
+		"ville": "casablanca",
+		"pays": "Maroc",
+		"entreprise/université": "Sopra Banking Software",
+		"poste": "Ingénieur étude et développement",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/mehdi-srija-510775132/"
+	},
+	{
+		"nom": "takkal",
+		"prenom": "mouad",
+		"promo": "2017",
+		"ville": "casablanca",
+		"pays": "Maroc",
+		"entreprise/université": "Payment Center For Africa ",
+		"poste": "Full Stack Developer",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/takkal-mouad-346326120/"
+	},
+	{
+		"nom": "tebbai",
+		"prenom": "ayoub",
+		"promo": "2017",
+		"ville": "paris",
+		"pays": "France",
+		"entreprise/université": "Université Paris 13",
+		"poste": "master student",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/ayoub-tebbai/"
+	},
+	{
+		"nom": "zyane",
+		"prenom": "rania",
+		"promo": "2017",
+		"ville": "Rabat",
+		"pays": "Maroc",
+		"entreprise/université": "OCTO Technologies",
+		"poste": "consultant IT",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/raniazy/"
+	},
+	{
+		"nom": "touzani",
+		"prenom": "fadoua",
+		"promo": "2017",
+		"ville": "casablanca",
+		"pays": "Maroc",
+		"entreprise/université": "PayLogic",
+		"poste": "Ingénieure de projets monétiques",
+		"filiere ": "GL",
+		"linkedIn": "https://www.linkedin.com/in/fadoua-touzani-ensias/"
+	}
+]
+
