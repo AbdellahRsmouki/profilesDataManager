@@ -1,29 +1,34 @@
-import room1 from "./images/details-1.jpeg";
 
-export default room1;
-export default items = [
+export default [
 	{
+		"id" : "01",
 		"nom": "ahadri",
 		"prenom": "hatim",
 		"promo": "2017",
 		"ville": "paris",
 		"pays": "France",
-		"entreprise/université": "BNP Paris bas",
+		"entreprise/universite": "BNP Paris bas",
 		"poste": "Full Stack Consultant ",
 		"filiere ": "GL",
-		"linkedIn": "https://www.linkedin.com/in/hatim-ahadri/"
+		"featured" : true,
+		"linkedIn": "https://www.linkedin.com/in/hatim-ahadri/",
+		"image" : "https://media.licdn.com/dms/image/C4E03AQEUSJ_sSzjcIw/profile-displayphoto-shrink_200_200/0?e=1580947200&v=beta&t=cNSoOoWK2tamtP-9HJgWK6TLgFM0bT6pqwR1pmdJc4A"
 	},
 	{
+		"id" : "02",
 		"nom": "ahmadoun",
 		"prenom": "douae",
 		"promo": "2017",
 		"ville": "paris",
 		"pays": "France",
-		"entreprise/université": "Université Paris Descartes",
+		"entreprise/universite": "Université Paris Descartes",
 		"poste": "Phd student",
 		"filiere ": "GL",
-		"linkedIn": "https://www.linkedin.com/in/douae-ahmadoun/"
-	},
+		"featured" : true,
+		"linkedIn": "https://www.linkedin.com/in/douae-ahmadoun/",
+		"image" : "https://media.licdn.com/dms/image/C4E03AQEUSJ_sSzjcIw/profile-displayphoto-shrink_200_200/0?e=1580947200&v=beta&t=cNSoOoWK2tamtP-9HJgWK6TLgFM0bT6pqwR1pmdJc4A"
+	}];
+	/*
 	{
 		"nom": "alehyen",
 		"prenom": "Ismail",
@@ -532,3 +537,4 @@ export default items = [
 	}
 ]
 
+*/

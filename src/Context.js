@@ -10,15 +10,11 @@ class ProfilesProvider extends Component {
         sortedProfiles:[],
         featuredProfiles:[],
         loading:true,
-        type:'all',
-        capacity:1,
-        price:0,
-        minPrice:0,
-        maxPrice:0,
-        minSize:0,
-        maxSize:0,
-        breakfast:false,
-        pet:false
+        promo:'all',
+        option:'all',
+        post:'all',
+        Student:false,
+        laureat:false
     }
 
     // GETDATA
@@ -26,6 +22,7 @@ class ProfilesProvider extends Component {
     componentDidMount(){
         // this.getDATA
         let profiles = this.formatData(items);
+        console.log(profiles);
         let featuredProfiles = profiles.filter(profile => profile.featured === true);
         let maxPrice = Math.max(...profiles.map(item=>item.price));
         let maxSize = Math.max(...profiles.map(item=>item.size));
@@ -38,20 +35,19 @@ class ProfilesProvider extends Component {
 
     formatData(items){
         let tempItems = items.map(item => {
-            
-            let id = item.sys.id;
-            let images = item.fields.images.map(image => 
-                image.fields.file.url
-            );
-            let profile = {...item.fields,images,id}
+            let id = parseInt(item.id);
+            let image = item.image;
+            let profile = {...item,id,image}
             return profile;
         });
         return tempItems;
     }
 
-    getProfile = (slug) =>{
+    getProfile = (id) =>{
         let tempProfiles = [...this.state.profiles];
-        const profile = tempProfiles.find(profile => profile.slug === slug);
+        // console.log("selected profile: "+id);
+        const profile = tempProfiles.find(profile => profile.id == id);
+        // console.log("selected profile: "+tempProfiles);
         return profile;
     }
 

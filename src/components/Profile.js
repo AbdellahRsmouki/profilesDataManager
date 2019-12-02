@@ -6,30 +6,32 @@ import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 export default function Profile({profile}) {
-    // console.log(profile);
-    const {name,images,slug,price} = profile;
+    console.log(profile);
+
+    const {nom,prenom,id,promo,image} = profile;
     return (
         <article className="room">
             <div className="img-container">
-            <img src={images[0] || defaultImg}/>
-            <div className="price-top">
-            <h6>{price}</h6>
-            <p>promo</p>
+                <img src={image} alt={defaultImg}/>
+                <div className="price-top">
+                    <p>promo {promo}</p>
+                </div>  
+                <Link to={`/profiles/${id}`} className="btn-primary room-link">
+                    Details
+                </Link>
             </div>
-            <Link to={`/profiles/${slug}`} className="btn-primary room-link">
-                Details
-            </Link>
-            </div>
-            <p className="room-info">{name}</p>
+            <p className="room-info">{nom+"-"+prenom}</p>
         </article>
     )
 }
 
 Profile.propTypes = {
     profile:PropTypes.shape({
-        name:PropTypes.string.isRequired,
-        slug:PropTypes.string.isRequired,
-        images:PropTypes.arrayOf(PropTypes.string).isRequired,
-        price:PropTypes.number.isRequired,
+        nom:PropTypes.string.isRequired,
+        prenom:PropTypes.string.isRequired,
+        image:PropTypes.string.isRequired,
+        promo:PropTypes.string.isRequired,
+        // filiere:PropTypes.number.isRequired,
+
     })
 }

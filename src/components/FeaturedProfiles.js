@@ -11,7 +11,7 @@ export default class FeaturedProfiles extends Component {
         profiles = profiles.map(profile => {
             return <Profile key={profile.id} profile = {profile} />
         })
-        // console.log(profiles);
+        console.log(profiles);
         return (
             <section className="featured-rooms">
                 <Title title="Featured Profiles" />

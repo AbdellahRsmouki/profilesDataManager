@@ -16,7 +16,7 @@ export default class SingleProfile extends Component {
         super(props)
         // console.log(this.props);
         this.state = {
-            slug: this.props.match.params.slug,
+            id: this.props.match.params.id,
             dafaultBcg
         }
     }
@@ -26,8 +26,9 @@ export default class SingleProfile extends Component {
     // componentDidMount(){}
     render() {
         const {getProfile} = this.context;
-        const profile = getProfile(this.state.slug);
-        // console.log(profile);
+        const profile = getProfile(this.state.id);
+        console.log("profile is: "+profile);
+        console.log("state")
         if(!profile){
             return<div className="error"> 
                 <h3>no such profile..</h3>
