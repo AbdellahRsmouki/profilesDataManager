@@ -1,6 +1,6 @@
 import React from 'react'
 import CompaniesList from './CompaniesList';
-import {WithProfileConsumer} from '../Context';
+import {WithProfileConsumer} from '../ProfilesContext';
 import Loading from './Loading'
 
 

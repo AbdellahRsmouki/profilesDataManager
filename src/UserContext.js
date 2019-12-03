@@ -5,33 +5,47 @@ const UserContext = React.createContext();
 
 class UserProvider extends Component {
     state = {
-        userName:[],
+        user:{
+            id: "",
+            login:"",
+            token:0,
+            nom: "",
+		    prenom: "",
+		    ville: "",
+		    pays: "",
+		    filiere: "",
+		    linkedIn: "",
+		    image: "",
+		    featured : false,
+		    details: " ",
+		    keywords:""
+        },
         loggedIn:false,
-        image:0,
-        token:0,
         loading:true,
     }
 
     // GETDATA
-    getUser = (loggin,pass) =>{
-        let tempProfiles = [...this.state.profiles];
-        const profile = tempProfiles.find(profile => profile.slug === pass);
-        return profile;
+    checkAuthen = (login,pass) =>{
+        let _pass="pass";
+        let _login="abde";
+        if(_login === login && _pass === pass){
+            this.setState
+            ({
+                loading:false,
+                loggedIn:true,
+                user:{login:_login, promo: "2020",filiere:"GL", featured:true, linkedIn:"https://www.linkedin.com/in/hassan-mahmoud-495a60198/",...this.state.user}
+            });
+            return true;
+        }
+        return false;
     }
     componentDidMount(){
         // this.getDATA
-        let profiles = this.formatData(profiles);
-        let featuredProfiles = profiles.filter(profile => profile.featured === true);
-        let maxPrice = Math.max(...profiles.map(item=>item.price));
-        let maxSize = Math.max(...profiles.map(item=>item.size));
-        this.setState({
-            profiles, featuredProfiles, sortedProfiles:profiles, loading:false,
-            price: maxPrice, maxPrice, maxSize
-        })
+
         // console.log(profiles);
     }
 
-    formatData(items){
+    /*formatData(items){
         let tempItems = items.map(item => {
             
             let id = item.sys.id;
@@ -42,16 +56,19 @@ class UserProvider extends Component {
             return profile;
         });
         return tempItems;
-    }
+    }*/
 
-    handleChange = event =>{
+    handleUserStateChange = event =>{
         const target = event.target;
-        const value = target.type === 'checkbox' ?
-        target.checked:target.value;
-        const name = event.target.name;
         this.setState({
-            [name]:value
-        },this.filterProfiles);
+            loggedIn:true
+        });
+        console.log(this.state.loggedIn)
+    }
+    logout = () =>{
+        this.setState({
+            loggedIn:false
+        });
     }
 
     render() {
@@ -59,8 +76,10 @@ class UserProvider extends Component {
             <UserContext.Provider 
                 value={{
                     ...this.state,
-                    getProfile: this.getProfile,
-                    handleChange: this.handleChange
+                    loggedIn:this.state.loggedIn,
+                    checkAuthen: this.checkAuthen,
+                    logout:this.logout,
+                    handleUserStateChange: this.handleUserStateChange
                 }}>
                 {this.props.children}
             </UserContext.Provider>
@@ -68,5 +87,15 @@ class UserProvider extends Component {
     }
 }
 
-export const UserConsumer = UserContext.Consumer
-export default UserContext;
+const UserConsumer = UserContext.Consumer
+
+export function WithUserConsumer(Component){
+    return function ConsumerWrapper(props){
+        return <UserConsumer>
+            {
+                value => <Component {...props} context={value} />
+            }
+        </UserConsumer>
+    }
+}
+export{UserConsumer, UserProvider, UserContext};

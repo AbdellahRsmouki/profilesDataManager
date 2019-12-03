@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Loading from './Loading';
-import {ProfileContext} from '../Context';
+import {ProfileContext} from '../ProfilesContext';
 import Title from './Title';
 import Profile from './Profile'
 

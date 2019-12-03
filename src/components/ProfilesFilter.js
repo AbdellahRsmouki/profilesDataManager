@@ -1,6 +1,6 @@
 import React from 'react'
 import {useContext} from 'react'
-import {ProfileContext} from '../Context';
+import {ProfileContext} from '../ProfilesContext';
 import Title from './Title';
 
 

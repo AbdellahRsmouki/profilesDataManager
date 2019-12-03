@@ -3,19 +3,26 @@ import './App.css';
 
 import Home from './pages/Home';
 import SingleProfilePage from './pages/SingleProfile';
+import SingleCompanyPage from './pages/SingleCompany';
 import ErrorPage from './pages/Error';
-import ProfilesPage from './pages/Companies';
+import CompaniesPage from './pages/Companies';
+import ProfilesPage from './pages/profiles';
 import AuthenPage from './pages/AuthenPage';
+import {useContext} from 'react'
 
 import {Route, Switch} from 'react-router-dom';
+import {UserContext} from './UserContext';
+
 
 import Navbar from './components/Navbar'
 function App() {
-
-  if(false){
+  const context = useContext(UserContext);
+  console.log(context);
+  const {loggedIn}=context;
+  if(!loggedIn){
     return(
       <Switch>
-        <Route component={AuthenPage} />
+        <Route path='/auth' component={AuthenPage} />
       </Switch>
     )
   }
@@ -26,9 +33,9 @@ function App() {
     <Switch>
       <Route exact path='/' component={Home} />
       <Route exact path='/profiles' component={ProfilesPage} />
-      <Route exact path='/profiles/:id' component={SingleProfilePage} />
-      <Route exact path='/companies' component={ProfilesPage} />
-      <Route exact path='/companies/:slug' component={SingleProfilePage} />
+      <Route exact path='/profiles/:slug' component={SingleProfilePage} />
+      <Route exact path='/companies' component={CompaniesPage} />
+      <Route exact path='/companies/:slug' component={SingleCompanyPage} />
       <Route component={ErrorPage} />
       </Switch>
     </>

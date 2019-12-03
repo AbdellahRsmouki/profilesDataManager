@@ -4,17 +4,26 @@ import logo from '../images/logo.png';
 import {FaAlignRight} from 'react-icons/fa';
 import {Link } from 'react-router-dom';
 import Home from '../pages/Home';
-import Profiles from '../pages/profiles'
+import Profiles from '../pages/profiles';
+import {UserContext} from '../UserContext';
+import {useContext} from 'react'
+
 
 
 
 export default class Navbar extends Component {
+    static contextType = UserContext;
+
     state = {
         isOpen:false
     }
 
     handleToggle = () => {
         this.setState({isOpen:!this.state.isOpen});
+    }
+    logout = () => {
+        const {logout}=this.context;
+        logout();
     }
 
     render(){
@@ -43,10 +52,10 @@ export default class Navbar extends Component {
                         </li>
                         <ul class="nav-links show-nav">
                             <li>
-                                <Link  to="/login">Sign in</Link>
+                                <Link  to="/auth">Sign in</Link>
                             </li>
                             <li>
-                                <Link  to="/logout">Sign out</Link>
+                                <Link onClick={this.logout}  to="/auth">Sign out</Link>
                             </li>
                         </ul>
                     </ul>

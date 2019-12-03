@@ -1,13 +1,30 @@
 import React, { Component } from 'react'
+import Modal from 'react-awesome-modal';;
 
 export default class RegisterComponent extends React.Component {
 
     constructor(props) {
       super(props);
-      this.state = {};
+      this.state = {
+        modalVisible:false
+      };
     }
   
-    submitRegister(e) {}
+    submitRegister(e) {
+      this.openModal();
+    }
+
+    openModal() {
+        this.setState({
+          modalVisible : true
+        });
+    }
+
+    closeModal() {
+        this.setState({
+          modalVisible : false
+        });
+    }
   
     render() {
       return (
@@ -46,6 +63,13 @@ export default class RegisterComponent extends React.Component {
               .submitRegister
               .bind(this)}>Register</button>
           </div>
+          <Modal visible={this.state.modalVisible} width="400" height="300" effect="fadeInUp" onClickAway={() => this.closeModal()}>
+              <div className="register-message">
+                  <h1 >Registeration</h1>
+                  <p>We are gowing to send you a response to your email as soon as possible</p>
+                  <div onClick={() => this.closeModal()} className="close-register-message">Close</div>
+              </div>
+          </Modal>
         </div>
       );
     }

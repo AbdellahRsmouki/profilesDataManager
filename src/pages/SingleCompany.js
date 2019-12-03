@@ -7,7 +7,7 @@ import StyledHero from '../components/StyledHero';
 
 import {Link} from 'react-router-dom'
 
-import {ProfileContext} from '../Context'
+import {CompaniesContext} from '../CompaniesContext'
 
 
 
@@ -21,14 +21,14 @@ export default class SingleCompany extends Component {
         }
     }
 
-    static contextType = ProfileContext;
+    static contextType = CompaniesContext;
 
     // componentDidMount(){}
     render() {
-        const {getProfile} = this.context;
-        const profile = getProfile(this.state.slug);
+        const {getCompany} = this.context;
+        const company = getCompany(this.state.slug);
         // console.log(profile);
-        if(!profile){
+        if(!company){
             return<div className="error"> 
                 <h3>no such profile..</h3>
                 <Link to='/profiles' className="btn-primary">
@@ -38,7 +38,7 @@ export default class SingleCompany extends Component {
         }
 
         const {name, description, capacity, size, price, extras,
-            breakfast, pets, images} = profile;
+            breakfast, pets, images} = company;
 
         const [mainImg,...defaultImg] = images;
         return (

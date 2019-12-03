@@ -7,20 +7,20 @@ import PropTypes from 'prop-types';
 
 export default function Profile({profile}) {
     console.log(profile);
-
-    const {nom,prenom,id,promo,image} = profile;
+    const defaultProfileImg = "https://saage.edu.sg/wp-content/uploads/2018/08/Unknown-Boy.jpg";
+    const {nom,prenom,promo,image} = profile;
     return (
         <article className="room">
             <div className="img-container">
-                <img src={image} alt={defaultImg}/>
+                <img src={image?image:defaultProfileImg} alt={defaultImg}/>
                 <div className="price-top">
                     <p>promo {promo}</p>
                 </div>  
-                <Link to={`/profiles/${id}`} className="btn-primary room-link">
+                <Link to={`/profiles/${nom}-${prenom}`} className="btn-primary room-link">
                     Details
                 </Link>
             </div>
-            <p className="room-info">{nom+"-"+prenom}</p>
+            <p className="room-info">{nom+" "+prenom}</p>
         </article>
     )
 }
@@ -29,7 +29,7 @@ Profile.propTypes = {
     profile:PropTypes.shape({
         nom:PropTypes.string.isRequired,
         prenom:PropTypes.string.isRequired,
-        image:PropTypes.string.isRequired,
+        // image:PropTypes.string.isRequired,
         promo:PropTypes.string.isRequired,
         // filiere:PropTypes.number.isRequired,
 

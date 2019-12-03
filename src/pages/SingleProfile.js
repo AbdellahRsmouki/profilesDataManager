@@ -5,18 +5,21 @@ import Hero from '../components/Hero';
 import Banner from '../components/Banner'
 import StyledHero from '../components/StyledHero';
 
+import { FaLinkedin} from 'react-icons/fa';
+
+
 import {Link} from 'react-router-dom'
 
-import {ProfileContext} from '../Context'
+import {ProfileContext} from '../ProfilesContext'
 
 
 
 export default class SingleProfile extends Component {
     constructor(props){
         super(props)
-        // console.log(this.props);
+        console.log(this.props);
         this.state = {
-            id: this.props.match.params.id,
+            slug: this.props.match.params.slug,
             dafaultBcg
         }
     }
@@ -26,8 +29,8 @@ export default class SingleProfile extends Component {
     // componentDidMount(){}
     render() {
         const {getProfile} = this.context;
-        const profile = getProfile(this.state.id);
-        console.log("profile is: "+profile);
+        const profile = getProfile(this.state.slug);
+        console.log("profile is: "+profile.id);
         console.log("state")
         if(!profile){
             return<div className="error"> 
@@ -38,14 +41,15 @@ export default class SingleProfile extends Component {
             </div>
         }
 
-        const {name, description, capacity, size, price, extras,
-            breakfast, pets, images} = profile;
+        const {nom, prenom, poste, pays, promo, entreprise_universite,
+            filiere, ville,linkedIn, image, details, keywords} = profile;
 
-        const [mainImg,...defaultImg] = images;
+        const mainImg = image;
+        const defaultImg = "https://i.stack.imgur.com/l60Hf.png";
         return (
             <>
-                <StyledHero img={mainImg}>
-                    <Banner title={`${name} profile`}>
+                <StyledHero img={mainImg?mainImg:defaultImg}>
+                    <Banner title={`${prenom} ${nom}'s profile`}>
                         <Link to='/profiles' className="btn-primary">
                         Back to profiles
                         </Link>
@@ -53,38 +57,37 @@ export default class SingleProfile extends Component {
                 </StyledHero>
                 <section className="single-room">
                     <div className="single-room-images">
-                        {defaultImg.map((item,index) => {
-                             return <img key={index} src={item} alt={name}/>
-                        })}
+                        {/*defaultImg.map((item,index) => {
+                             return <img key={index} src={item} alt={nom}/>
+                        })*/}
                     </div>
                     <div className="single-room-info">
                         <article className="desc">
                             <h3>Details</h3>
-                            <p>{description}</p>
+                            <p className="title-profile-poste">{poste}</p>
+                            <p>{details}</p>
                         </article>
                         <article className="info">
                             <h3>Infos</h3>
-                            <h6>price: ${price}</h6>
-                            <h6>size: ${size}</h6>
-                            <h6>max capacity: {
-                            capacity>1? `${capacity} people`:
-                                        `${capacity} person`}
+                            <h6>promo: {promo}</h6>
+                            <h6>filiere: {filiere}</h6>
+                            <h6>Lieu: {
+                            `La ville de ${ville} au ${pays}`}
                             </h6>
-                            <h6>{
-                            pets? `pets allowed`:
-                                        `no pets allowed`}
+                            <h6>Entreprise/Université:<br/> {entreprise_universite}</h6>
+                            <h6  >
+                            <a href={linkedIn} className="title-linkedin-lien">LinkedIn
+                            </a>
                             </h6>
-                            <h6>{
-                            breakfast &&  "free breakfast included"}</h6>
                         </article>
                     </div>
                 </section>
                 <section className="room-extras">
                 <h6>Extras</h6>
                 <ul className="extras">
-                    {extras.map((item,index) => {
+                    {keywords?keywords.split(",").map((item,index) => {
                     return <li key={index}>- {item}</li>
-                    })}
+                    }):<h6>No keywords mentioned</h6>}
                 </ul>
                 </section>
             </>

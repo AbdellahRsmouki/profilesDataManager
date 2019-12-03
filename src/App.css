@@ -313,17 +313,26 @@ html, body, #root {
 }
 /* end of navbar */
 /* Hero */
-.defaultHero,
-.roomsHero {
+.defaultHero{
   min-height: calc(100vh - 66px);
   background: url("./images/back-image.jpeg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.roomsHero {
+.companiesHero {
+  background-image: url("./images/Technopolis_rabat_maroc.jpg");
+  min-height: calc(100vh - 66px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profilesHero {
   background-image: url("./images/defaultBcg.jpeg");
   min-height: calc(100vh - 66px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* End of Hero */
 /* Banner */
@@ -595,6 +604,19 @@ html, body, #root {
   .info {
     padding-left: 3rem;
   }
+  .title-profile-poste{
+    font-size: 1em;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(0, 160, 61);
+  }
+  .title-linkedin-lien{
+    font-size: 1em;
+    margin-bottom: 50px;
+    font-weight: bold;
+    color: rgb(78, 160, 255);
+  }
 }
 /* end of single room*/
 /* roomlist */
@@ -674,3 +696,24 @@ html, body, #root {
   }
 }
 /* end of rooms fitler*/
+/*Login Page*/
+
+.error-message{
+  offset: '30px';
+  color: #e74c3c;
+}
+/* end of Login Page*/
+/*register Page*/
+.register-message{
+  background: var(--darkGrey);
+  padding: 0.5rem 0;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: var(--mainSpacing);
+  width:"400";
+  height:"300";
+}
+.close-register-message{
+  padding-top: 150px;
+  color:  #e74c3c;
+}

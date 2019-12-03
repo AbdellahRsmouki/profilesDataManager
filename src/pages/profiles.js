@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 const profiles = () => {
     return (
         <>
-            <Hero hero="roomsHero">
-                <Banner title="Profiles" >
+            <Hero hero="profilesHero">
+                <Banner title="Profiles" >      
                     <Link to='/' className="btn-primary">
                         return home 
                     </Link>

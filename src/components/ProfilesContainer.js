@@ -1,7 +1,7 @@
 import React from 'react'
 import ProfilesFilter from './ProfilesFilter'
 import ProfilesList from './ProfilesList';
-import {WithProfileConsumer} from '../Context';
+import {WithProfileConsumer} from '../ProfilesContext';
 import Loading from './Loading'
 
 

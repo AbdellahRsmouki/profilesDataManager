@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Companies = () => {
     return (
         <>
-            <Hero hero="roomsHero">
+            <Hero hero="companiesHero">
                 <Banner title="Companies" >
                     <Link to='/' className="btn-primary">
                         return home 
