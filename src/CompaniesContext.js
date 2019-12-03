@@ -54,42 +54,22 @@ class CompaniesProvider extends Component {
         const name = event.target.name;
         this.setState({
             [name]:value
-        },this.filterProfiles);
+        },this.filterCompanies);
     }
 
     filterCompanies = () => {
-        let {profiles,type, capacity, price, minSize, maxSize,breakfast, pets} = this.state;
+        let {companies,taille,ville} = this.state;
         // all the profiles
-        let tempProfiles = [...profiles];
+        let tempProfiles = [...companies];
         // transform values
-        capacity = parseInt(capacity);
-        price = parseInt(price);
+        // capacity = parseInt(capacity);
         // filter by type
-        if(type!=='all'){
-            tempProfiles = tempProfiles.filter(profile=>profile.type===type)
+        if(taille!=='all'){
+            tempProfiles = tempProfiles.filter(profile=>profile.taille===taille)
         }
-
-        // filter by price
-        tempProfiles = tempProfiles.filter(profile=>profile.price<=price)
-
-        // filter by capacity
-        if(capacity!==1){
-            tempProfiles = tempProfiles.filter(profile=>profile.capacity>=capacity)
+        if(ville!=='all'){
+            tempProfiles = tempProfiles.filter(profile=>profile.ville===ville)
         }
-
-        // filter by size
-        tempProfiles = tempProfiles.filter(profile=>profile.size<=maxSize && profile.size>=minSize)
-
-        // filter by pets
-        if(pets){
-            tempProfiles = tempProfiles.filter(profile=>profile.pets===true)
-        }
-
-        // filter by breakfast
-        if(breakfast){
-            tempProfiles = tempProfiles.filter(profile=>profile.breakfast===true)
-        }
-
         //change state
         this.setState({
             sortedCompanies:tempProfiles

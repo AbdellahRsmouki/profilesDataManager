@@ -23,7 +23,7 @@ class ProfilesProvider extends Component {
         // this.getDATA
         let profiles = this.formatData(items);
         console.log(profiles);
-        let featuredProfiles = profiles.filter(profile => profile.featured === true);
+        let featuredProfiles = profiles.filter(profile => profile.featured === true).slice(0, 3);
         // let maxPrice = Math.max(...profiles.map(item=>item.price));
         // let maxSize = Math.max(...profiles.map(item=>item.size));
         this.setState({

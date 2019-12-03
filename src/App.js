@@ -19,7 +19,7 @@ function App() {
   const context = useContext(UserContext);
   console.log(context);
   const {loggedIn}=context;
-  if(!loggedIn){
+  if(loggedIn){
     return(
       <Switch>
         <Route path='/auth' component={AuthenPage} />
@@ -31,6 +31,7 @@ function App() {
     <>
     <Navbar />
     <Switch>
+      <Route path='/auth' component={AuthenPage} />
       <Route exact path='/' component={Home} />
       <Route exact path='/profiles' component={ProfilesPage} />
       <Route exact path='/profiles/:slug' component={SingleProfilePage} />

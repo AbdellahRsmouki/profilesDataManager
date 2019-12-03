@@ -1,6 +1,6 @@
 import React from 'react'
 import {useContext} from 'react'
-import {ProfileContext} from '../ProfilesContext';
+import {CompaniesContext} from '../CompaniesContext';
 import Title from './Title';
 
 
@@ -10,24 +10,21 @@ const getUnique = (items,value) =>{
     return [...new Set(items.map(item=> item[value]))];
 }
 
-export default function ProfilesFilter({profiles}) {
+export default function CompaniesFilter({profiles}) {
 
-    const context = useContext(ProfileContext);
-    const {handleChange, laureat, Student, post, option, promo} =context;
-    // get unique types
-        let types = getUnique(profiles,'post');
+    const context = useContext(CompaniesContext);
+    const {handleChange, taille,ville} =context;
+    // get unique tailles
+    let tailles = getUnique(profiles,'taille');
     // add all
-    types= ['all',...types];
+    tailles= ['all',...tailles];
     // map to jsx
-    types = types.map((item,index) => {
+    tailles = tailles.map((item,index) => {
         return <option value={item} key={index}>{item}</option>
     });
-    let options = getUnique(profiles,'option');
-    options = options.map((item,index) => {
-        return <option value={item} key={index}>{item}</option>
-    });
-    let promos = getUnique(profiles,'promo');
-    promos = promos .map((item,index) => {
+    let villes = getUnique(profiles,'ville');
+    villes= ['all',...villes];
+    villes = villes.map((item,index) => {
         return <option value={item} key={index}>{item}</option>
     });
     return (
@@ -36,23 +33,23 @@ export default function ProfilesFilter({profiles}) {
             <form className="filter-form">
                 {/*select type*/}
                 <div className="form-group">
-                    <label htmlFor="type">Promo</label>
-                    <select name="type" id="type" value={promo}
+                    <label htmlFor="taille">Promo</label>
+                    <select name="taille" id="taille" value={taille}
                     className="form-control" onChange={handleChange}>
-                        {promo}
+                        {tailles}
                     </select>
                 </div>
                 {/*end of select type*/}
                 {/*guests*/}
                 <div className="form-group">
-                    <label htmlFor="capacity">Option</label>
-                    <select name="capacity" id="capacity" value={post}
+                    <label htmlFor="ville">Option</label>
+                    <select name="ville" id="ville" value={ville}
                     className="form-control" onChange={handleChange}>
-                        {post}
+                        {villes}
                     </select>
                 </div>
                 {/*end of guests*/}
-                {/*guests*/}
+                {/*guests
                 <div className="form-group">
                     <label htmlFor="capacity">Profile type</label>
                     <select name="capacity" id="capacity" value={option}
@@ -60,7 +57,7 @@ export default function ProfilesFilter({profiles}) {
                         {option}
                     </select>
                 </div>
-                {/*end of guests*/}
+                end of guests*/}
                 {/*room price}
                 <div className="form-group">
                     <label htmlFor="price">Room price ${price}</label>
@@ -79,7 +76,7 @@ export default function ProfilesFilter({profiles}) {
                     </div>
                 </div>
                 {end of room size*/}
-                {/*extras*/}
+                {/*extras
                 <div className="form-group">
                     <div className="single-extra">
                         <input name="breakfast" id="breakfast" type="checkbox" checked={breackfast} onChange={handleChange}/>
@@ -90,7 +87,7 @@ export default function ProfilesFilter({profiles}) {
                     <label htmlFor="pets">Laureats</label>
                     </div>
                 </div>
-                {/*end of extras*/}
+                end of extras*/}
             </form>
         </section>
     )

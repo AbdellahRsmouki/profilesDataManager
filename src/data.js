@@ -10,7 +10,7 @@ export default [
 		"pays": "France",
 		"entreprise_universite": "BNP Paris bas",
 		"poste": "Full Stack Consultant ",
-		"filiere ": "GL",
+		"filiere": "GL",
 		"featured": true,
 		"laureat": true,
 		"student": false,

@@ -52,11 +52,11 @@ export default class Navbar extends Component {
                         </li>
                         <ul class="nav-links show-nav">
                             <li>
-                                <Link  to="/auth">Sign in</Link>
+                                <Link  to="/auth">S'authentifier</Link>
                             </li>
-                            <li>
+                            {/*<li>
                                 <Link onClick={this.logout}  to="/auth">Sign out</Link>
-                            </li>
+                            </li>*/}
                         </ul>
                     </ul>
                 </div>

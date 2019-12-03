@@ -42,24 +42,10 @@ class UserProvider extends Component {
     componentDidMount(){
         // this.getDATA
 
-        // console.log(profiles);
+        // console.log(user);
     }
 
-    /*formatData(items){
-        let tempItems = items.map(item => {
-            
-            let id = item.sys.id;
-            let images = item.fields.images.map(image => 
-                image.fields.file.url
-            );
-            let profile = {...item.fields,images,id}
-            return profile;
-        });
-        return tempItems;
-    }*/
-
     handleUserStateChange = event =>{
-        const target = event.target;
         this.setState({
             loggedIn:true
         });

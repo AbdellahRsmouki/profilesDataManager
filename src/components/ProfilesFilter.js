@@ -23,10 +23,12 @@ export default function ProfilesFilter({profiles}) {
         return <option value={item} key={index}>{item}</option>
     });
     let filieres = getUnique(profiles,'filiere');
+    filieres = ['all',...filieres];
     filieres = filieres.map((item,index) => {
         return <option value={item} key={index}>{item}</option>
     });
     let promos = getUnique(profiles,'promo');
+    promos = ['all',...promos];
     promos = promos.map((item,index) => {
         return <option value={item} key={index}>{item}</option>
     });
