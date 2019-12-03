@@ -11,9 +11,9 @@ class ProfilesProvider extends Component {
         featuredProfiles:[],
         loading:true,
         promo:'all',
-        option:'all',
-        post:'all',
-        Student:false,
+        filiere:'all',
+        poste:'all',
+        student:false,
         laureat:false
     }
 
@@ -24,11 +24,10 @@ class ProfilesProvider extends Component {
         let profiles = this.formatData(items);
         console.log(profiles);
         let featuredProfiles = profiles.filter(profile => profile.featured === true);
-        let maxPrice = Math.max(...profiles.map(item=>item.price));
-        let maxSize = Math.max(...profiles.map(item=>item.size));
+        // let maxPrice = Math.max(...profiles.map(item=>item.price));
+        // let maxSize = Math.max(...profiles.map(item=>item.size));
         this.setState({
             profiles, featuredProfiles, sortedProfiles:profiles, loading:false,
-            price: maxPrice, maxPrice, maxSize
         })
         // console.log(profiles);
     }
@@ -54,8 +53,7 @@ class ProfilesProvider extends Component {
 
     handleChange = event =>{
         const target = event.target;
-        const value = target.type === 'checkbox' ?
-        target.checked:target.value;
+        const value = target.type === 'checkbox' ? target.checked:target.value;
         const name = event.target.name;
         this.setState({
             [name]:value
@@ -63,36 +61,30 @@ class ProfilesProvider extends Component {
     }
 
     filterProfiles = () => {
-        let {profiles,type, capacity, price, minSize, maxSize,breakfast, pets} = this.state;
+
+        let {profiles, laureat, student, poste,filiere, promo} = this.state;
         // all the profiles
         let tempProfiles = [...profiles];
         // transform values
-        capacity = parseInt(capacity);
-        price = parseInt(price);
+        // capacity = parseInt(capacity);
+        // price = parseInt(price);
         // filter by type
-        if(type!=='all'){
-            tempProfiles = tempProfiles.filter(profile=>profile.type===type)
+        if(poste!=='all'){
+            tempProfiles = tempProfiles.filter(profile=>profile.poste===poste)
         }
-
-        // filter by price
-        tempProfiles = tempProfiles.filter(profile=>profile.price<=price)
-
-        // filter by capacity
-        if(capacity!==1){
-            tempProfiles = tempProfiles.filter(profile=>profile.capacity>=capacity)
+        if(filiere!=='all'){
+            tempProfiles = tempProfiles.filter(profile=>profile.filiere===filiere)
+        }if(promo!=='all'){
+            tempProfiles = tempProfiles.filter(profile=>profile.promo===promo)
         }
-
-        // filter by size
-        tempProfiles = tempProfiles.filter(profile=>profile.size<=maxSize && profile.size>=minSize)
-
         // filter by pets
-        if(pets){
-            tempProfiles = tempProfiles.filter(profile=>profile.pets===true)
+        if(laureat){
+            tempProfiles = tempProfiles.filter(profile=>profile.laureat===true)
         }
 
         // filter by breakfast
-        if(breakfast){
-            tempProfiles = tempProfiles.filter(profile=>profile.breakfast===true)
+        if(student){
+            tempProfiles = tempProfiles.filter(profile=>profile.student===true)
         }
 
         //change state

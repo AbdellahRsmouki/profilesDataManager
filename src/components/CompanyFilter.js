@@ -13,21 +13,21 @@ const getUnique = (items,value) =>{
 export default function ProfilesFilter({profiles}) {
 
     const context = useContext(ProfileContext);
-    const {handleChange, laureat, student, poste, filiere, promo} =context;
+    const {handleChange, laureat, Student, post, option, promo} =context;
     // get unique types
-    let postes = getUnique(profiles,'poste');
+        let types = getUnique(profiles,'post');
     // add all
-    postes= ['all',...postes];
+    types= ['all',...types];
     // map to jsx
-    postes = postes.map((item,index) => {
+    types = types.map((item,index) => {
         return <option value={item} key={index}>{item}</option>
     });
-    let filieres = getUnique(profiles,'filiere');
-    filieres = filieres.map((item,index) => {
+    let options = getUnique(profiles,'option');
+    options = options.map((item,index) => {
         return <option value={item} key={index}>{item}</option>
     });
     let promos = getUnique(profiles,'promo');
-    promos = promos.map((item,index) => {
+    promos = promos .map((item,index) => {
         return <option value={item} key={index}>{item}</option>
     });
     return (
@@ -36,28 +36,28 @@ export default function ProfilesFilter({profiles}) {
             <form className="filter-form">
                 {/*select type*/}
                 <div className="form-group">
-                    <label htmlFor="promo">Promo</label>
-                    <select name="promo" id="promo" value={promo}
+                    <label htmlFor="type">Promo</label>
+                    <select name="type" id="type" value={promo}
                     className="form-control" onChange={handleChange}>
-                        {promos}
+                        {promo}
                     </select>
                 </div>
                 {/*end of select type*/}
                 {/*guests*/}
                 <div className="form-group">
-                    <label htmlFor="poste">Poste</label>
-                    <select name="poste" id="poste" value={poste}
+                    <label htmlFor="capacity">Option</label>
+                    <select name="capacity" id="capacity" value={post}
                     className="form-control" onChange={handleChange}>
-                        {postes}
+                        {post}
                     </select>
                 </div>
                 {/*end of guests*/}
                 {/*guests*/}
                 <div className="form-group">
-                    <label htmlFor="filiere">filiere</label>
-                    <select name="filiere" id="filiere" value={filiere}
+                    <label htmlFor="capacity">Profile type</label>
+                    <select name="capacity" id="capacity" value={option}
                     className="form-control" onChange={handleChange}>
-                        {filieres}
+                        {option}
                     </select>
                 </div>
                 {/*end of guests*/}
@@ -82,12 +82,12 @@ export default function ProfilesFilter({profiles}) {
                 {/*extras*/}
                 <div className="form-group">
                     <div className="single-extra">
-                        <input name="student" id="student" type="checkbox" checked={student} onChange={handleChange}/>
-                        <label htmlFor="student">Students</label>
+                        <input name="breakfast" id="breakfast" type="checkbox" checked={breackfast} onChange={handleChange}/>
+                        <label htmlFor="breakfast">Students</label>
                     </div>
                     <div className="single-extra">
-                    <input name="laureat" id="laureat" type="checkbox" checked={laureat} onChange={handleChange}/>
-                    <label htmlFor="laureat">Laureats</label>
+                    <input name="pets" id="pets" type="checkbox" checked={pets} onChange={handleChange}/>
+                    <label htmlFor="pets">Laureats</label>
                     </div>
                 </div>
                 {/*end of extras*/}

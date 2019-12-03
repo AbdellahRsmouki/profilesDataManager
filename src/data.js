@@ -11,7 +11,9 @@ export default [
 		"entreprise_universite": "BNP Paris bas",
 		"poste": "Full Stack Consultant ",
 		"filiere ": "GL",
-		"featured" : true,
+		"featured": true,
+		"laureat": true,
+		"student": false,
 		"linkedIn": "https://www.linkedin.com/in/hatim-ahadri/",
 		"image" : "https://media.licdn.com/dms/image/C4E03AQEUSJ_sSzjcIw/profile-displayphoto-shrink_200_200/0?e=1580947200&v=beta&t=cNSoOoWK2tamtP-9HJgWK6TLgFM0bT6pqwR1pmdJc4A",
 		"keywords": "data, SQL SERVER, ORACLE Database"
@@ -28,6 +30,8 @@ export default [
 		"poste": "Phd student",
 		"filiere": "GL",
 		"featured" : true,
+		"laureat": true,
+		"student": false,
 		"linkedIn": "https://www.linkedin.com/in/douae-ahmadoun/",
 		"image" : "https://media.licdn.com/dms/image/C4D03AQFc4oTRoPRSJA/profile-displayphoto-shrink_200_200/0?e=1580947200&v=beta&t=TOAYqUx3Kw3FDy7sutYkK_HL5_UyohAaTzoZkUrW2Gg"
 	},
@@ -43,6 +47,8 @@ export default [
 		"linkedIn": "https://www.linkedin.com/in/ismail-alehyen/",
 		"image": "https://media.licdn.com/dms/image/C4D03AQFcUaS629WDBw/profile-displayphoto-shrink_200_200/0?e=1580947200&v=beta&t=LiCpPAO2aS5t7OpmtFyf2enn-aPv4buY5fDu7xeN_uI",
 		"featured" : true,
+		"laureat": true,
+		"student": false,
 		"id": "3",
 		"details": "this is the third one"
 	}/*,
@@ -73,6 +79,8 @@ export default [
 		"linkedIn": "https://www.linkedin.com/in/el-mehdi-amal-17bb09133/",
 		"image": "https://media.licdn.com/dms/image/C4D03AQH7-ZX5hGDC4Q/profile-displayphoto-shrink_200_200/0?e=1580947200&v=beta&t=AasSDRwijmeVO8jcgpJYdnSbi9QNkOiUeyRyohShaXk",
 		"featured" : true,
+		"laureat": true,
+		"student": false,
 		"id": "4",
 		"details": "this is the fourth one"
 	},
@@ -87,6 +95,8 @@ export default [
 		"filiere": "GL",
 		"linkedIn": "https://www.linkedin.com/in/rida-amine-33ba8ba8/",
 		"featured" : true,
+		"laureat": true,
+		"student": false,
 		"id": "5",
 		"details": "this is the fourth one"
 	},
@@ -102,6 +112,8 @@ export default [
 		"linkedIn": "https://www.linkedin.com/in/taha-amine-10731b115/",
 		"image": "",
 		"featured" : true,
+		"laureat": true,
+		"student": false,
 		"id": "6",
 		"details": "this is the fourth one"
 	},
@@ -117,6 +129,8 @@ export default [
 		"linkedIn": "https://www.linkedin.com/in/ilyasse-arajoum-7b115610b/",
 		"image": "",
 		"featured" : true,
+		"laureat": true,
+		"student": false,
 		"id": "7",
 		"details": ""
 	},
@@ -132,6 +146,8 @@ export default [
 		"linkedIn": "https://www.linkedin.com/in/arrad-hamza-125683a0/",
 		"image": "",
 		"featured" : true,
+		"laureat": true,
+		"student": false,
 		"id": "8",
 		"details": " Java/Java EE Consultant on PLM Windchill chez Gfi Informatique "
 	},
@@ -147,6 +163,8 @@ export default [
 		"linkedIn": "https://www.linkedin.com/in/arzmi-imad-83235a116/",
 		"image": "",
 		"featured" : true,
+		"laureat": true,
+		"student": false,
 		"id": "9",
 		"details": " Java/Java EE Consultant on PLM Windchill chez Gfi Informatique "
 	},
@@ -162,6 +180,8 @@ export default [
 		"linkedIn": "https://www.linkedin.com/in/chaymae-azouggarh-a76a73116/",
 		"image": "https://media.licdn.com/dms/image/C5103AQFz4S2347H2dA/profile-displayphoto-shrink_200_200/0?e=1580947200&v=beta&t=GDRErzTjmfD-1nQw6hCWcfsN16Vp4Tp4sTN0C21z7IE",
 		"featured" : true,
+		"laureat": true,
+		"student": false,
 		"id": "10",
 		"details": " Java/Java EE Consultant on PLM Windchill chez Gfi Informatique "
 	},
@@ -177,6 +197,8 @@ export default [
 		"linkedIn": "https://www.linkedin.com/in/anas-azaroual-8556a4132/",
 		"image": "https://media.licdn.com/dms/image/C5603AQEhudZ_5m6nUw/profile-displayphoto-shrink_200_200/0?e=1580947200&v=beta&t=UEzHSX0oeeiONvWfwXfqBSj_4NYZOO_jIlGRDJ3mzm4",
 		"featured" : true,
+		"laureat": true,
+		"student": false,
 		"id": "11",
 		"details": " Java/Java EE Consultant on PLM Windchill chez Gfi Informatique ",
 		"keywords": "Git, Data Analysis, Python"
@@ -193,6 +215,8 @@ export default [
 		"linkedIn": "https://www.linkedin.com/in/khadija-baamrani-b7b457121/",
 		"image": "https://media.licdn.com/dms/image/C5103AQFLhM_sXpw8uw/profile-displayphoto-shrink_200_200/0?e=1580947200&v=beta&t=sE2Lx-ys1lP81HRAfGDJT8loOTwEL8vSzQ2Dc48V34c",
 		"featured" : true,
+		"laureat": true,
+		"student": false,
 		"id": "12",
 		"details": " Pas de details",
 		"keywords": "PHP, Symphony, Gestion de projet, Scrum"
