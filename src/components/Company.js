@@ -7,29 +7,27 @@ import PropTypes from 'prop-types';
 
 export default function Company({company}) {
     // console.log();
-    const {name,images,slug,price} = company;
+    const {nom,image,id} = company;
     return (
         <article className="room">
             <div className="img-container">
-            <img src={images[0] || defaultImg}/>
+            <img src={image}/>
             <div className="price-top">
-            <h6>{price}</h6>
-            <p>promo</p>
+            <p>nbr ensiast</p>
             </div>
-            <Link to={`/companies/${slug}`} className="btn-primary room-link">
+            <Link to={`/companies/${nom}`} className="btn-primary room-link">
                 Details
             </Link>
             </div>
-            <p className="room-info">{name}</p>
+            <p className="room-info">{nom}</p>
         </article>
     )
 }
 
 Company.propTypes = {
     company:PropTypes.shape({
-        name:PropTypes.string.isRequired,
+        nom:PropTypes.string.isRequired,
         slug:PropTypes.string.isRequired,
-        images:PropTypes.arrayOf(PropTypes.string).isRequired,
-        price:PropTypes.number.isRequired,
+        image:PropTypes.string.isRequired,
     })
 }

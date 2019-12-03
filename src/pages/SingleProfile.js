@@ -76,8 +76,7 @@ export default class SingleProfile extends Component {
                             </h6>
                             <h6>Entreprise/Université:<br/> {entreprise_universite}</h6>
                             <h6  >
-                            <a href={linkedIn} className="title-linkedin-lien">LinkedIn
-                            </a>
+                            <a href={linkedIn} className="title-linkedin-lien">LinkedIn</a>
                             </h6>
                         </article>
                     </div>

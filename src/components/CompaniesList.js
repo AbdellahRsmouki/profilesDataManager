@@ -1,12 +1,12 @@
 import React from 'react'
-import Profile from './Profile'
+import Company from './Company'
 
 
-export default function ProfilesList({companies}) {
+export default function CompaniesList({companies}) {
     if(companies.length === 0){
         return (
             <div className="empty-search">
-                <h3>No profiles matched your search parameters</h3>
+                <h3>No companies matched your search parameters</h3>
             </div>
         )
     }
@@ -15,7 +15,7 @@ export default function ProfilesList({companies}) {
             <div className="roomslist-center">
                 {
                     companies.map((item) => {
-                        return <Profile key={item.id} profile={item} />
+                        return <Company key={item.id} company={item} />
                     })
                 }
             </div>

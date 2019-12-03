@@ -17,7 +17,6 @@ export default class SingleCompany extends Component {
         // console.log(this.props);
         this.state = {
             slug: this.props.match.params.slug,
-            dafaultBcg
         }
     }
 
@@ -30,60 +29,60 @@ export default class SingleCompany extends Component {
         // console.log(profile);
         if(!company){
             return<div className="error"> 
-                <h3>no such profile..</h3>
-                <Link to='/profiles' className="btn-primary">
-                Back to profiles
+                <h3>no such company..</h3>
+                <Link to='/companies' className="btn-primary">
+                Back to companies
                 </Link>
             </div>
         }
 
-        const {name, description, capacity, size, price, extras,
-            breakfast, pets, images} = company;
+        const {nom, details, specialite, site_web, fondee, ville,
+            pays, linkedIn, image,id, taille, keywords} = company;
 
-        const [mainImg,...defaultImg] = images;
+        const mainImg = image;
         return (
             <>
                 <StyledHero img={mainImg}>
-                    <Banner title={`${name} profile`}>
-                        <Link to='/profiles' className="btn-primary">
-                        Back to profiles
+                    <Banner title={`${nom}`}>
+                        <Link to='/companies' className="btn-primary">
+                        Back to companies
                         </Link>
                     </Banner>
                 </StyledHero>
                 <section className="single-room">
                     <div className="single-room-images">
-                        {defaultImg.map((item,index) => {
+                        {/*defaultImg.map((item,index) => {
                              return <img key={index} src={item} alt={name}/>
-                        })}
+                        })*/}
                     </div>
                     <div className="single-room-info">
                         <article className="desc">
                             <h3>Details</h3>
-                            <p>{description}</p>
+                            <p>{details}</p>
                         </article>
                         <article className="info">
                             <h3>Infos</h3>
-                            <h6>price: ${price}</h6>
-                            <h6>size: ${size}</h6>
-                            <h6>max capacity: {
-                            capacity>1? `${capacity} people`:
-                                        `${capacity} person`}
+                            <h6>Fondee en : {fondee}</h6>
+                            <h6>size: {taille}</h6>
+                            <h6>specialite: {specialite}</h6>
+                            <h6>Lieu: {
+                            `{ville} au {pays}`}
                             </h6>
-                            <h6>{
-                            pets? `pets allowed`:
-                                        `no pets allowed`}
+                            <h6>
+                                <a href={site_web} className="title-linkedin-lien">site web</a>
                             </h6>
-                            <h6>{
-                            breakfast &&  "free breakfast included"}</h6>
+                            <h6>
+                                <a href={linkedIn} className="title-linkedin-lien">LinkedIn</a>
+                            </h6>
                         </article>
                     </div>
                 </section>
                 <section className="room-extras">
                 <h6>Extras</h6>
                 <ul className="extras">
-                    {extras.map((item,index) => {
-                    return <li key={index}>- {item}</li>
-                    })}
+                    {keywords?keywords.split(",").map((item,index) => {
+                        return <li key={index}>- {item}</li>
+                        }):<h6>No keywords mentioned</h6>}
                 </ul>
                 </section>
             </>

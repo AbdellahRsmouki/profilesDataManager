@@ -1,18 +1,18 @@
 import React from 'react'
 import CompaniesList from './CompaniesList';
-import {WithProfileConsumer} from '../ProfilesContext';
+import {WithCompanyConsumer} from '../CompaniesContext';
 import Loading from './Loading'
 
 
 function CompaniesContainer({context}) {
-    const {loading, sortedProfiles}= context;
+    const {loading, sortedCompanies}= context;
     if(loading){
         return <Loading />
     }   
     return(
         <>
-        <CompaniesList companies={sortedProfiles}/>
+        <CompaniesList companies={sortedCompanies}/>
         </>
     )
 }
-export default WithProfileConsumer(CompaniesContainer);
+export default WithCompanyConsumer(CompaniesContainer);

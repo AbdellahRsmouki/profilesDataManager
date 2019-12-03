@@ -5,14 +5,17 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import App from './App';
 import {ProfilesProvider} from './ProfilesContext';
 import {UserProvider} from './UserContext';
+import {CompaniesProvider} from './CompaniesContext';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
     <UserProvider>
         <ProfilesProvider>
-            <Router>
-                <App />
-            </Router>
+            <CompaniesProvider>
+                <Router>
+                    <App />
+                </Router>
+            </CompaniesProvider>
         </ProfilesProvider>
     </UserProvider>
     , document.getElementById('root'));
