@@ -8,6 +8,7 @@ import StyledHero from '../components/StyledHero';
 import {Link} from 'react-router-dom'
 
 import {CompaniesContext} from '../CompaniesContext'
+import FooterPage from '../components/Footer';
 
 
 
@@ -85,6 +86,7 @@ export default class SingleCompany extends Component {
                         }):<h6>No keywords mentioned</h6>}
                 </ul>
                 </section>
+                <FooterPage />
             </>
         )
     }

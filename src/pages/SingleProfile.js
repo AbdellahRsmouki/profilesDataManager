@@ -11,6 +11,7 @@ import { FaLinkedin} from 'react-icons/fa';
 import {Link} from 'react-router-dom'
 
 import {ProfileContext} from '../ProfilesContext'
+import FooterPage from '../components/Footer';
 
 
 
@@ -89,6 +90,7 @@ export default class SingleProfile extends Component {
                     }):<h6>No keywords mentioned</h6>}
                 </ul>
                 </section>
+                <FooterPage />
             </>
         )
     }

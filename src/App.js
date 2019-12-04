@@ -12,9 +12,12 @@ import {useContext} from 'react'
 
 import {Route, Switch} from 'react-router-dom';
 import {UserContext} from './UserContext';
+import FooterPage from './components/Footer';
+
 
 
 import Navbar from './components/Navbar'
+import UpdateProfile from './pages/UpdateProfile';
 function App() {
   const context = useContext(UserContext);
   console.log(context);
@@ -22,7 +25,7 @@ function App() {
   if(loggedIn){
     return(
       <Switch>
-        <Route path='/auth' component={AuthenPage} />
+        <Route component={UpdateProfile} />
       </Switch>
     )
   }

@@ -7,7 +7,7 @@ import Services from '../components/Services';
 import FeaturedProfiles from '../components/FeaturedProfiles';
 import { Link } from 'react-router-dom';
 import FeaturedCompanies from '../components/FeaturedCompanies';
-import FooterPage from '../components/Footer';
+import Footer from '../components/Footer';
 
 export default function Home() {
     return (
@@ -24,7 +24,7 @@ export default function Home() {
             <FeaturedProfiles />
             <FeaturedCompanies />
             <Statistics />
-            <FooterPage />
+            <Footer />
         </>
     )
 }

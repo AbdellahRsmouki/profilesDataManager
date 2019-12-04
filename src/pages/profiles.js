@@ -3,6 +3,8 @@ import Hero from '../components/Hero';
 import Banner from '../components/Banner';
 import ProfilesContainer from '../components/ProfilesContainer'
 import { Link } from 'react-router-dom';
+import FooterPage from '../components/Footer';
+
 const profiles = () => {
     return (
         <>
@@ -14,6 +16,7 @@ const profiles = () => {
                 </Banner>
             </Hero>
             <ProfilesContainer />
+            <FooterPage />
         </>
     )
 }

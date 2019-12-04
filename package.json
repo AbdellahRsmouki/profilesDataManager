@@ -4,12 +4,15 @@
   "private": true,
   "dependencies": {
     "mdbreact": "^4.23.0",
+    "ra-input-rich-text": "^3.0.1",
     "react": "^16.11.0",
     "react-alert": "^6.0.0",
     "react-alert-template-basic": "^1.0.0",
+    "react-avatar-edit": "^0.8.3",
     "react-awesome-modal": "^2.0.5",
     "react-dom": "^16.11.0",
     "react-icons": "^3.8.0",
+    "react-images-upload": "^1.2.7",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "styled-components": "^4.4.1"
