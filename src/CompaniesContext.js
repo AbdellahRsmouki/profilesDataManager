@@ -20,7 +20,7 @@ class CompaniesProvider extends Component {
         // this.getDATA
         let companies = this.formatData(items);
         console.log(companies);
-        let featuredCompanies = companies.filter(company => company.featured === true);
+        let featuredCompanies = companies.filter(company => company.featured === true).slice(0, 3);
         // let maxPrice = Math.max(...profiles.map(item=>item.price));
         // let maxSize = Math.max(...profiles.map(item=>item.size));
         this.setState({
