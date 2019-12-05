@@ -39,8 +39,7 @@ export default class Navbar extends Component {
                             <FaAlignRight className="nav-icon" />
                         </button>
                     </div>
-                    <ul className={this.state.isOpen?
-                        "nav-links show-nav":"nav-links"}>
+                    <ul className="nav-links show-nav">
                         <li>
                             <Link to="/">Home</Link>
                         </li>
@@ -50,15 +49,15 @@ export default class Navbar extends Component {
                         <li>
                             <Link to="/companies">Companies</Link>
                         </li>
-                        <ul class="nav-links show-nav">
-                            <li>
-                                <Link  to="/auth">S'authentifier</Link>
-                            </li>
+                    </ul>
+                    <ul class="nav-links show-nav">
+                        <div>
+                            <Link  to="/auth">S'authentifier</Link>
+                        </div>
                             {/*<li>
                                 <Link onClick={this.logout}  to="/auth">Sign out</Link>
                             </li>*/}
                         </ul>
-                    </ul>
                 </div>
             </nav>
         )

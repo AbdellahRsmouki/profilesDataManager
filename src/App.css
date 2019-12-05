@@ -251,10 +251,7 @@ html, body, #root {
   background: var(--offWhite);
   z-index: 1;
 }
-.nav-header {
-  display: flex;
-  justify-content: space-between;
-}
+
 .nav-btn {
   background: transparent;
   border: none;
@@ -300,6 +297,7 @@ html, body, #root {
     max-width: 1170px;
     margin: 0 auto;
     display: flex;
+    justify-content: space-between;
   }
   .nav-links {
     height: auto;
