@@ -79,7 +79,7 @@ export default class SingleCompany extends Component {
                     </div>
                 </section>
                 <section className="room-extras">
-                <h6>Extras</h6>
+                <h6>Keywords : </h6>
                 <ul className="extras">
                     {keywords?keywords.split(",").map((item,index) => {
                         return <li key={index}>- {item}</li>
