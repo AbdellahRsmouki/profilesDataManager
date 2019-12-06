@@ -1,49 +1,57 @@
 import React, { Component } from 'react'
 import Title from './Title';
-import { FaCalendarAlt} from 'react-icons/fa';
-import {MdAccessibility, MdPersonAdd} from 'react-icons/md';
-import {GiStairsGoal} from 'react-icons/gi';
-
+import Chart from './Chart';
 export default class Statistics extends Component {
-    state={
-        Services:[
-            {
-                icon:<MdAccessibility />,
-                title: "Accessebility",
-                info: "Easy access to useful data"
-            },
-            {
-                icon:<MdPersonAdd />,
-                title: "Grow Your Professional Network",
-                info: "ENSIAS Laureats together the biggest IT community in Morocco"
-            },
-            {
-                icon:<GiStairsGoal />,
-                title: "strategy & organization",
-                info: "inspire from the best profiles to meet your goals"
-            },
-            {
-                icon:<FaCalendarAlt />,
-                title: "News",
-                info: "Be the first to hear about conferences and workshops inside ENSIAS"
-            }
-        ]
+    
+    constructor(props){
+        super(props);
+        this.state = {
+            chartData:{}
+        }
+        // this.getChartData = this.getChartData.bind(this);   
+    }
+
+    componentWillMount(){
+        this.getchartData();
+    }
+
+    getChartData(){
+        // Ajax calls here
+        this.setState({
+          chartData:{
+            labels: ['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
+            datasets:[
+              {
+                label:'Population',
+                data:[
+                  617594,
+                  181045,
+                  153060,
+                  106519,
+                  105162,
+                  95072
+                ],
+                backgroundColor:[
+                  'rgba(255, 99, 132, 0.6)',
+                  'rgba(54, 162, 235, 0.6)',
+                  'rgba(255, 206, 86, 0.6)',
+                  'rgba(75, 192, 192, 0.6)',
+                  'rgba(153, 102, 255, 0.6)',
+                  'rgba(255, 159, 64, 0.6)',
+                  'rgba(255, 99, 132, 0.6)'
+                ]
+              }
+            ]
+          }
+        });
     }
     render() {
         return (
             <section className="services">
-            <Title title="Statistiques"/>
-            <div className="services-center">
-                {
-                    this.state.Services.map((item, index) => {
-                        return <article key={index} className="service">
-                            <span>{item.icon}</span>
-                            <h6>{item.title}</h6>
-                            <p>{item.info}</p>
-                        </article>
-                    })
-                }
-            </div>
+                <Title title="Statistiques"/>
+                <div className="chart">
+                <Chart chartData={this.state.chartData} location="Massachusetts" legendPosition="bottom"/>
+                </div>
             </section>
         )
     }
