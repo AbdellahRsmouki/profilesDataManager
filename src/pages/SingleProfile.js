@@ -31,8 +31,8 @@ export default class SingleProfile extends Component {
     render() {
         const {getProfile} = this.context;
         const profile = getProfile(this.state.slug);
-        console.log("profile is: "+profile.id);
-        console.log("state")
+        // console.log("profile is: "+profile.id);
+        // console.log("state")
         if(!profile){
             return<div className="error"> 
                 <h3>no such profile..</h3>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import dafaultBcg from '../images/room-1.jpeg'
+// import dafaultBcg from '../images/room-1.jpeg'
 import Hero from '../components/Hero';
 import Banner from '../components/Banner'
 import StyledHero from '../components/StyledHero';
@@ -28,7 +28,7 @@ export default class SingleCompany extends Component {
         const {getCompany} = this.context;
         const company = getCompany(this.state.slug);
         // console.log(profile);
-        if(!company){
+        if(company === "No company found"){
             return<div className="error"> 
                 <h3>no such company..</h3>
                 <Link to='/companies' className="btn-primary">

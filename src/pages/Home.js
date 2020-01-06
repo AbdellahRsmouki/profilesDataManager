@@ -8,6 +8,8 @@ import FeaturedProfiles from '../components/FeaturedProfiles';
 import { Link } from 'react-router-dom';
 import FeaturedCompanies from '../components/FeaturedCompanies';
 import Footer from '../components/Footer';
+import Post from '../components/Post';
+import PostsList from '../components/PostsList';
 
 export default function Home() {
     return (
@@ -20,6 +22,7 @@ export default function Home() {
                     </Link>
                 </Banner>
             </Hero>
+            {/*<PostsList />*/}
             <Services />
             <FeaturedProfiles />
             <FeaturedCompanies />
