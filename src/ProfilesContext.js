@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import items from './data';
+import axios from './axios'
 
 const ProfileContext = React.createContext();
 
@@ -18,11 +19,26 @@ class ProfilesProvider extends Component {
     }
 
     // GETDATA
+    getData(){
+        axios
+            .get(`/profiles/`, {})
+            .then(res => {
+                const data = res.data
+                console.log("getted profiles from the api: "+ JSON.stringify(data))
+                this.setState({profiles:data});
+
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+    }
 
     componentDidMount(){
         // this.getDATA
+        // this.getData();
+        this.setState({profiles:items});
         let profiles = this.formatData(items);
-        console.log(profiles);
+        console.table(profiles);
         let featuredProfiles = profiles.filter(profile => profile.featured === true).slice(0, 3);
         // let maxPrice = Math.max(...profiles.map(item=>item.price));
         // let maxSize = Math.max(...profiles.map(item=>item.size));

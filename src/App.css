@@ -437,7 +437,6 @@ html, body, #root {
 /*end of services */
 
 /* featured rooms */
-
 .featured-rooms {
   padding: 5rem 0;
 }
@@ -789,10 +788,9 @@ line-height: 1.4;
 padding: 8px 5px;
 margin: auto;
 }
-
+/*width: 400px;*/ 
 #sc-edprofile {
 background: #f0f0f0;
-width: 400px;
 margin: 0 auto;
 margin-top: 8px;
 margin-bottom: 2%;
@@ -811,7 +809,11 @@ color: #fff;
 
 div#sc-edprofile .sc-container {
 background: #f0f0f0;
-padding: 6% 4%;
+/*padding: 6% 4%;*/
+margin-top: 20px;
+margin-bottom: 20px;
+text-align: center;
+align-content: center;
 }
 
 div#sc-edprofile input[type="email"],
@@ -849,7 +851,7 @@ cursor: pointer;
 }
 
 div#sc-edprofile input[type="submit"]:hover {
-background: #2288bb;
+background: #e74c3c;
 }
 .edit-profile-image{
   padding-top: 5px;
@@ -875,7 +877,7 @@ background: #2288bb;
   }
   .update-profile-title{
     width: 100%;
-    background: #3399cc;
+    background: #ccc;
     border: 0;
     text-align: center;
     padding: 4%;
@@ -886,7 +888,8 @@ background: #2288bb;
   .update-profile-image-title{
     padding-bottom: 10px;
     text-align: left  ;
-    color: #3399cc;
+    
+    color: #e74c3c;
     font-family: 'Open Sans', sans-serif;
     font-size: medium;
   }
@@ -895,4 +898,36 @@ background: #2288bb;
     height: 100%;
     background: #3399cc;
     padding: 4%;
+  }
+
+  .fileInput{
+  border-bottom: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  padding: 10px;
+  margin: 15px;
+  cursor: pointer;
+  }
+
+  .imgPreview{
+  text-align: center;
+  padding: 10px;
+  margin: 15px;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+  }
+  .centerText{
+    text-align: center;
+    width: 500px;
+  }
+  .validateupdatingprofile{
+    margin-bottom: 20px;
+    margin-top: 70px;
   }

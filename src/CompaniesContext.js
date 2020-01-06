@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import items from './CompaniesData';
+import { MdFormatUnderlined } from 'react-icons/md';
 
 const CompaniesContext = React.createContext();
 
@@ -19,7 +20,7 @@ class CompaniesProvider extends Component {
     componentDidMount(){
         // this.getDATA
         let companies = this.formatData(items);
-        console.log(companies);
+        console.table(companies);
         let featuredCompanies = companies.filter(company => company.featured === true).slice(0, 3);
         // let maxPrice = Math.max(...profiles.map(item=>item.price));
         // let maxSize = Math.max(...profiles.map(item=>item.size));
@@ -41,9 +42,11 @@ class CompaniesProvider extends Component {
 
     getCompany = (slug) =>{
         let tempCompanies = [...this.state.companies];
-        console.log("selected profile "+"for "+slug+": ");
+        // console.log("selected profile "+"for "+slug+": ");
         const company = tempCompanies.find(company =>  company.nom === slug);
-        console.log(+company);
+        // console.log(+company);
+        if (company === undefined)
+            return "No company found";
         return company;
     }
 

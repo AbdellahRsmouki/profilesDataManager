@@ -14,6 +14,8 @@ export default [
 		"featured": true,
 		"laureat": true,
 		"student": false,
+		"e-mail": "abezdcmcolfds.sdchb@gmail.com",
+		"website": "xqsjhsjdchscsd.com",
 		"linkedIn": "https://www.linkedin.com/in/hatim-ahadri/",
 		"image" : "https://media.licdn.com/dms/image/C4E03AQEUSJ_sSzjcIw/profile-displayphoto-shrink_200_200/0?e=1580947200&v=beta&t=cNSoOoWK2tamtP-9HJgWK6TLgFM0bT6pqwR1pmdJc4A",
 		"keywords": "data, SQL SERVER, ORACLE Database"
