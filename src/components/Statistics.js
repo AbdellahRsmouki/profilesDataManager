@@ -12,7 +12,7 @@ export default class Statistics extends Component {
     }
 
     componentWillMount(){
-        this.getchartData();
+        this.getChartData();
     }
 
     getChartData(){
