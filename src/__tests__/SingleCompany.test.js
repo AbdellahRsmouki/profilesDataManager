@@ -1,6 +1,5 @@
 import React from 'react';
 import { CompaniesContext, CompaniesProvider} from '../CompaniesContext';
-import SingleCompany from './../pages/SingleCompany'
 import { mount} from 'enzyme';
 
 /**
@@ -9,16 +8,27 @@ import { mount} from 'enzyme';
  */
 describe("companies context", ()=>{
     it('CompaniesConsumer shows default value', () => {
-      const {getCompany } = React.useContext(CompaniesContext);
+      var company = undefined;
+      const TestComponent = () => {
+        const {getCompany } = React.useContext(CompaniesContext);
+        return (
+            <>
+                <button id="getcompany" onClick={() => company = getCompany("20")}>GET COMPANY</button>
+            </>
+        );
+    }
 
       const wrapper = mount(
         <CompaniesProvider>
-            <SingleCompany />
+            <TestComponent />
         </CompaniesProvider>
     )
+      wrapper.find('#getcompany').simulate('click');
 
-      expect(getCompany("20").toBe("No company found"));
-    })
+      expect(company).toBe("No company found");
+    
+    }
+  )
     
 })
 

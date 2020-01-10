@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
 import items from './CompaniesData';
-import { MdFormatUnderlined } from 'react-icons/md';
 
 const CompaniesContext = React.createContext();
 

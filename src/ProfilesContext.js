@@ -61,9 +61,11 @@ class ProfilesProvider extends Component {
     getProfile = (slug) =>{
         let tempProfiles = [...this.state.profiles];
         let _slug = slug.split("-");
-        console.log("selected profile "+"for "+slug+": "+_slug[0] +" "+ _slug[1]);
+        // onsole.log("selected profile "+"for "+slug+": "+_slug[0] +" "+ _slug[1]);
         const profile = tempProfiles.find(profile =>  profile.nom ===_slug[0] && profile.prenom ===_slug[1] );
-        console.log("selected profile -_-: "+profile);
+        // console.log("selected profile -_-: "+profile);
+        if (profile === undefined)
+            return "No profile found";
         return profile;
     }
 
