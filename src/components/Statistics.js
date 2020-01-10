@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Title from './Title';
 import Chart from './Chart';
+import axios from '../axios';
+
 export default class Statistics extends Component {
     
     constructor(props){
@@ -14,6 +16,21 @@ export default class Statistics extends Component {
     componentWillMount(){
         this.getChartData();
     }
+
+    // GETDATA
+    getData(){
+      axios
+          .get(`/statistics/`, {})
+          .then(res => {
+              const data = res.data
+              console.log("getted statistics from the api: "+ JSON.stringify(data))
+              this.setState({profiles:data});
+
+          })
+          .catch((error) => {
+              console.log(error)
+          })
+  }
 
     getChartData(){
         // Ajax calls here

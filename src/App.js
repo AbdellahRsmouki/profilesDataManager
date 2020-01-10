@@ -18,6 +18,7 @@ import FooterPage from './components/Footer';
 
 import Navbar from './components/Navbar'
 import UpdateProfile from './pages/UpdateProfile';
+
 function App() {
   const context = useContext(UserContext);
   // console.log(context);

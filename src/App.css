@@ -931,3 +931,62 @@ background: #e74c3c;
     margin-bottom: 20px;
     margin-top: 70px;
   }
+
+  /* slider && sliderArrow */
+
+  /*.App {
+    text-align: center;
+  }
+   
+  .App-logo {
+    height: 40vmin;
+  }
+   
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+   
+  .App-link {
+    color: #09d3ac;
+  }
+   
+  body{
+    background: #09d3ac;
+  }
+   */
+
+   .event-img{
+     width:1000px;
+     height:400px
+  }
+  
+  .slides {
+    position: relative;
+  }
+  
+  .slides .slick-prev,
+  .slides .slick-next {
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    background-size: 46px;
+    content: '';
+    opacity: 1;
+  }
+  
+  .slides .slick-prev {
+    left: 5px;
+  }
+  
+  .slides .slick-next {
+    right: 5px;
+  }

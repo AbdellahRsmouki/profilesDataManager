@@ -9,6 +9,7 @@
     "axios": "^0.19.0",
     "babel-jest": "^24.9.0",
     "chart.js": "^2.9.3",
+    "identity-obj-proxy": "^3.0.0",
     "mdbreact": "^4.23.0",
     "ra-input-rich-text": "^3.0.1",
     "react": "^16.11.0",
@@ -22,7 +23,10 @@
     "react-images-upload": "^1.2.7",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
+    "react-slack": "0.0.1",
+    "react-slick": "^0.25.2",
     "semantic-ui-react": "^0.88.2",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^4.4.1"
   },
   "scripts": {
@@ -50,5 +54,15 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "jest": "^24.9.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "./../__mocks__/fileMock.js",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    },
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      ".+\\.(css|styl|less|sass|scss)$": "jest-transform-css"
+    }
   }
 }

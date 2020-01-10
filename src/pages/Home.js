@@ -10,6 +10,7 @@ import FeaturedCompanies from '../components/FeaturedCompanies';
 import Footer from '../components/Footer';
 import Post from '../components/Post';
 import PostsList from '../components/PostsList';
+import Events from '../components/events';
 
 export default function Home() {
     return (
@@ -22,7 +23,7 @@ export default function Home() {
                     </Link>
                 </Banner>
             </Hero>
-            {/*<PostsList />*/}
+            <Events />
             <Services />
             <FeaturedProfiles />
             <FeaturedCompanies />
