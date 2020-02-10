@@ -17,7 +17,6 @@
 }
 /* globals */
 body {
-  padding-top: 66px;
   color: var(--mainBlack);
   background: var(--mainWhite);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -555,6 +554,11 @@ html, body, #root {
 .desc,
 .info {
   margin: 1rem 0;
+  margin-bottom: 0px;
+}
+.links
+{
+  margin-bottom: 0px;
 }
 .desc h3 {
   text-transform: capitalize;

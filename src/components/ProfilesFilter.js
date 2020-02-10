@@ -47,7 +47,7 @@ export default function ProfilesFilter({profiles}) {
                 {/*end of select type*/}
                 {/*guests*/}
                 <div className="form-group">
-                    <label htmlFor="poste">Poste</label>
+                    <label htmlFor="poste">Job</label>
                     <select name="poste" id="poste" value={poste}
                     className="form-control" onChange={handleChange}>
                         {postes}
@@ -56,7 +56,7 @@ export default function ProfilesFilter({profiles}) {
                 {/*end of guests*/}
                 {/*guests*/}
                 <div className="form-group">
-                    <label htmlFor="filiere">filiere</label>
+                    <label htmlFor="filiere">Branch</label>
                     <select name="filiere" id="filiere" value={filiere}
                     className="form-control" onChange={handleChange}>
                         {filieres}

@@ -33,7 +33,7 @@ export default function CompaniesFilter({profiles}) {
             <form className="filter-form">
                 {/*select type*/}
                 <div className="form-group">
-                    <label htmlFor="taille">Taille</label>
+                    <label htmlFor="taille">Size</label>
                     <select name="taille" id="taille" value={taille}
                     className="form-control" onChange={handleChange}>
                         {tailles}
@@ -42,7 +42,7 @@ export default function CompaniesFilter({profiles}) {
                 {/*end of select type*/}
                 {/*guests*/}
                 <div className="form-group">
-                    <label htmlFor="ville">Ville/Adresse</label>
+                    <label htmlFor="ville">Address</label>
                     <select name="ville" id="ville" value={ville}
                     className="form-control" onChange={handleChange}>
                         {villes}

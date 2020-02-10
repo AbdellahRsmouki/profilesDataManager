@@ -13,7 +13,10 @@ import {Link} from 'react-router-dom'
 import {ProfileContext} from '../ProfilesContext'
 import FooterPage from '../components/Footer';
 
-
+// import "material/button/mdc-button";
+// import '@material/react-button/dist/button.css';
+// import Button from '@material/react-button';
+import { MDBIcon, MDBBtn } from 'mdbreact';
 
 export default class SingleProfile extends Component {
     constructor(props){
@@ -70,14 +73,21 @@ export default class SingleProfile extends Component {
                         </article>
                         <article className="info">
                             <h3>Infos</h3>
-                            <h6>promo: {promo}</h6>
-                            <h6>filiere: {filiere}</h6>
-                            <h6>Lieu: {
-                            `La ville de ${ville} au ${pays}`}
+                            <h6>Promo: {promo}</h6>
+                            <h6>Branch: {filiere}</h6>
+                            <h6>Location: {
+                            `${ville}, ${pays}`}
                             </h6>
-                            <h6>Entreprise/Université:<br/> {entreprise_universite}</h6>
+                            <h6>Company/University: {entreprise_universite}</h6>
                             <h6  >
-                            <a href={linkedIn} className="title-linkedin-lien">LinkedIn</a>
+                                {/*<Button  >
+                                    LinkedIn
+                            </Button>*/}
+
+                                <MDBBtn social="li" href={linkedIn}>
+                                    <MDBIcon fab icon="linkedin-in" className="pr-1" /> 
+                                        Linkedin
+                                </MDBBtn>
                             </h6>
                         </article>
                     </div>

@@ -10,6 +10,7 @@ import {Link} from 'react-router-dom'
 import {CompaniesContext} from '../CompaniesContext'
 import FooterPage from '../components/Footer';
 
+import { MDBIcon, MDBBtn, MDBContainer} from 'mdbreact';
 
 
 export default class SingleCompany extends Component {
@@ -66,15 +67,20 @@ export default class SingleCompany extends Component {
                             <h6>Fondee en : {fondee}</h6>
                             <h6>size: {taille}</h6>
                             <h6>specialite: {specialite}</h6>
-                            <h6>Lieu: {
-                            `{ville} au {pays}`}
+                            <h6>Location: {
+                            `${ville}, ${pays}`}
                             </h6>
-                            <h6>
-                                <a href={site_web} className="title-linkedin-lien">site web</a>
-                            </h6>
-                            <h6>
-                                <a href={linkedIn} className="title-linkedin-lien">LinkedIn</a>
-                            </h6>
+                            <ul className="links">
+                                <MDBContainer>
+                                    <MDBBtn social="comm" href={site_web}>
+                                        <MDBIcon icon="comments" className="pr-1" /> SiteWeb
+                                    </MDBBtn>
+                                    <MDBBtn social="li" href={linkedIn}>
+                                        <MDBIcon fab icon="linkedin-in" className="pr-1" /> 
+                                            Linkedin
+                                    </MDBBtn>
+                                </MDBContainer>
+                            </ul>
                         </article>
                     </div>
                 </section>
@@ -82,8 +88,8 @@ export default class SingleCompany extends Component {
                 <h6>Keywords : </h6>
                 <ul className="extras">
                     {keywords?keywords.split(",").map((item,index) => {
-                        return <li key={index}>- {item}</li>
-                        }):<h6>No keywords mentioned</h6>}
+                        return  <li disabled="0" social="yt" key={index}> {item} </li>
+                        }):<MDBBtn>No keywords mentioned</MDBBtn>}
                 </ul>
                 </section>
                 <FooterPage />
