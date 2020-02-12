@@ -15,7 +15,7 @@ export default [
 		"keywords": "Mobile applications design, development Android, Innovative solutions for Education"
     },
     {
-		"id" : "1",
+		"id" : "2",
         "nom": "Atos",
         "specialite": "Technologies et services de l’information",
         "site_web": "http://atos.net",
@@ -28,5 +28,20 @@ export default [
 		"linkedIn": "https://www.linkedin.com/company/atos/",
 		"image" : "https://media.licdn.com/dms/image/C4D0BAQG1qAv27MEydg/company-logo_400_400/0?e=1583366400&v=beta&t=Wd_Daxk6CMzHedEdCNRsBoh07y_7Lv8pFVUOQm2rGfs",
         "keywords": "Mobile applications design, Cybersécurité , Cloud"
+	},
+	{
+		"id" : "3",
+        "nom": "Digimind",
+        "specialite": "Logiciels informatiques",
+        "site_web": "https://www.digimind.com",
+		"details": "Nous aidons nos clients à comprendre le monde tel qu'il est. \n Digimind est un leader mondial des plateformes d'écoute sociale et des logiciels de veille économique. Dans un monde submergé par les données, notre mission est d’aider nos clients à comprendre le monde tel qu’il est, en leur fournissant une vision la plus claire possible de leur perception de la marque et de l’environnement de marché. Digimind associe une technologie basée sur l'IA à des équipes dédiées au déploiement réussi de stratégies de transformation numérique basées sur l’écoute de leurs marchés, avec l'un des taux de renouvellement les plus élevés du secteur (93%) Fondée en 1998 et autofinancée depuis sa création, Digimind est aujourd’hui une équipe forte de 250 personnes et compte 10 bureaux répartis aux Amériques, en Europe, Afrique et Asie, au service de plus de 600 clients dans le monde.",
+        "fondee": "1998",
+        "taille": "201-500 employés",
+		"ville": "New York, NY",
+		"pays": "Les États-Unis",
+		"featured" : true,
+		"linkedIn": "https://www.linkedin.com/company/digimind/",
+		"image" : "https://www.digimind.com/hubfs/Assets%20S2/Images/banne-logo-copy.png",
+        "keywords": "competitive intelligence, market intelligence, online reputation, web data analysis, social media monitoring, social media listening, social media analytics, social media tool, Socila media management, social media monitoring software "
 	}
 ];

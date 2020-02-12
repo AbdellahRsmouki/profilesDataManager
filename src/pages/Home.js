@@ -11,6 +11,8 @@ import Footer from '../components/Footer';
 import Post from '../components/Post';
 import PostsList from '../components/PostsList';
 import Events from '../components/events';
+import FeaturesAccessHelper from '../components/FeaturesAccessHelper';
+
 
 export default function Home() {
     return (
@@ -23,11 +25,12 @@ export default function Home() {
                     </Link>
                 </Banner>
             </Hero>
+            <FeaturesAccessHelper />
             <Events />
-            <Services />
             <FeaturedProfiles />
             <FeaturedCompanies />
             <Statistics />
+            <Services />
             <Footer />
         </>
     )

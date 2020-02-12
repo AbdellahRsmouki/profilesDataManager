@@ -396,7 +396,7 @@ html, body, #root {
   padding: 5rem 0;
 }
 .services {
-  background: var(--darkGrey);
+  background: var(--mainWhite);
   text-align: center;
 }
 .services-center {
@@ -720,9 +720,10 @@ html, body, #root {
   color:  #e74c3c;
 }
 .mdb-class{
-  background-color:#ececec;
+  background-color:var(--offWhite);
   font-size: small;
-   
+  font-family: "Helvetica Neue";
+  padding: 20px;
 }
 .footer-column {
   float: left;
@@ -761,6 +762,20 @@ html, body, #root {
 
 
 /*start edit profile*/
+
+.update-profile-bloc{
+  margin: 10px;
+}
+.card-margin-top{
+  margin-top: 50px;
+}
+.big-card-margin-top{
+  padding: 10px;
+  margin-top: 80px;
+}
+.card-small-margin-top{
+  margin-top: 20px;
+}
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 

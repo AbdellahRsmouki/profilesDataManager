@@ -1,140 +1,307 @@
-import React, { Component } from 'react'
-import ImageUploader from 'react-images-upload';
-import Avatar from 'react-avatar-edit';
+import React from "react";
 
-export default class UpdateProfile extends Component {
+// reactstrap components
+import {
+  Button,
+  Card,
+  CardHeader,
+  CardBody,
+  FormGroup,
+  Form,
+  Input,
+  Container,
+  Row,
+  Col
+} from "reactstrap";
+// core components
+// import UserHeader from "components/Headers/UserHeader.js";
 
-    constructor(props) {
-        super(props);
-        const picture = '../images/company.jpg'
-        this.state = {
-        showError:false,
-        preview: null,
-        imagePreviewUrl:"",
-        file: "",
-        picture,
-        nom: "azaroual",
-		prenom: "anas",
-		promo: "2017",
-		ville: "casablanca",
-		pays: "Maroc",
-		entreprise_universite: "Nimble Ways",
-		poste: "Full Stack Developer",
-        filiere: "GL",
-        email: "",
-        website: "",
-		linkedIn: "https://www.linkedin.com/in/anas-azaroual-8556a4132/",
-		image: "https://media.licdn.com/dms/image/C5603AQEhudZ_5m6nUw/profile-displayphoto-shrink_200_200/0?e=1580947200&v=beta&t=UEzHSX0oeeiONvWfwXfqBSj_4NYZOO_jIlGRDJ3mzm4",
-		featured : false,
-		laureat: false,
-		student: true,
-		details: " Java/Java EE Consultant on PLM Windchill chez Gfi Informatique ",
-		keywords: "Git, Data Analysis, Python"
-        }
-        this.onCrop = this.onCrop.bind(this)
-        this.onClose = this.onClose.bind(this)
-    }
-
-    _handleSubmit(e) {
-        e.preventDefault();
-        // TODO: do something with -> this.state.file
-        console.log('handle uploading-', this.state.file);
-      }
-    
-    _handleImageChange(e) {
-        e.preventDefault();
-        let reader = new FileReader();
-        let file = e.target.files[0];
-        reader.onloadend = () => {
-          this.setState({
-            file: file,
-            imagePreviewUrl: reader.result
-          });
-        }   
-        reader.readAsDataURL(file)
-    }
-
-    onClose() {
-        this.setState({preview: null})
-      }
-      
-    onCrop(preview) {
-    this.setState({preview})
-    }
-    
-    render() {
-        
-    const imagePreviewUrl = this.state.imagePreviewUrl;
-    var imagePreview = null;
-    console.log("uploaded image: "+imagePreviewUrl);
-    if (imagePreviewUrl) {
-        imagePreview = (<img src={imagePreviewUrl} />);
-    } else {
-        imagePreview = (<div className="previewText">Please select an Image for Preview</div>);
-    }
-
+class Profile extends React.Component {
+  render() {
     return (
-        <div className="update-profile-row">
-            <h1 className="update-profile-title">Edit Profile Form</h1>
-            <div className="update-profile-column">
-                <div id="sc-edprofile">
-                    <div class="sc-container">
-                    {/*<h1 className="update-profile-image-title">Modifier les informations personnelles</h1>*/}
-    <input type="text" placeholder="Username" value={this.state.nom +"." +this.state.prenom} />{/*onChange={ (event) => this.setState({email: event.target.value})}*/}
-                        <input type="text" placeholder="Email Address" value={this.state.email} onChange={ (event) => this.setState({email: event.target.value})}/>
-                        <input type="password" placeholder="Password" value={this.state.password} onChange={ (event) => this.setState({password: event.target.value})}/>
-                        <input type="text" placeholder="Website" value={this.state.website} onChange={ (event) => this.setState({website: event.target.value})}/>
-                        <input type="text" placeholder="First Name" value={this.state.prenom} onChange={ (event) => this.setState({prenom: event.target.value})}/>
-                        <input type="text" placeholder="Last Name" value={this.state.nom} onChange={ (event) => this.setState({nom: event.target.value})}/>
-                        {/*<select>
-                        <option value="">Male</option>
-                        <option value="">Female</option>
-                        </select>*/}
-                        {/*<input type="text" placeholder="Facebook Profile URL" />
-                        <input type="text" placeholder="Twitter Profile URL" />*/}
-                        {/*<input type="text" placeholder="Google+ Profile URL" />*/}
-                        <input type="text" placeholder="LinkedIn Profile URL" value={this.state.linkedIn} onChange={ (event) => this.setState({linkedIn: event.target.value})}/>
-                        
+      <div className="update-profile-bloc">
+       {/* <UserHeader /> */}
+        {/* Page content */}
+        <Container className="mt--7" fluid>
+          <Row>
+            <Col className="order-xl-2 mb-5 mb-xl-0 card-margin-top" xl="4">
+              <Card className="card-profile shadow">
+                <Row className="justify-content-center">
+                  <Col className="order-lg-2" lg="3">
+                    <div className="card-profile-image">
+                      <a href="#pablo" onClick={e => e.preventDefault()}>
+                        <img
+                          alt="..."
+                          className="rounded-circle"
+                          src={require("../images/defaultBcg.jpeg")}
+                        />
+                      </a>
                     </div>
-                </div>
-            </div>
-            <div className="update-profile-column">
-            <div id="sc-edprofile">
-                <div class="sc-container">
-                {/*<h1 className="update-profile-image-title">Modifier l'image</h1>
-                <div className="previewComponent">*/}
-                    <form >
-                        <input className="fileInput" 
-                            type="file" 
-                            onChange={(e)=>this._handleImageChange(e)} />
-                    </form>
-                    <div className="imgPreview">
-                        {imagePreview}
+                  </Col>
+                </Row>
+                <CardBody className="pt-0 pt-md-4">
+                  <div className="text-center">
+                    <h3>
+                      Jessica Jones
+                      <span className="font-weight-light">, 27</span>
+                    </h3>
+                    <div className="h5 font-weight-300">
+                      <i className="ni location_pin mr-2" />
+                      Bucharest, Romania
                     </div>
-                {/*</div>*/}
-                        <br />
-                        <h1 className="update-profile-image-title">Modifier les informations de la formation à l'ENSIAS</h1>
-                        <select>
-                            <option value="" selected disabled hidden onChange={ (event) => this.setState({option: event.target.value})}>{this.state.option}</option>
-                            <option value="">GL</option>
-                            <option value="">IWIM</option>
-                            <option value="">emBI</option>
-                            <option value="">ISEM</option>
-                            <option value="">IeL</option>
-                            <option value="">SSI</option>
-                            <option value="">2IA</option>
-                            <option value="">IF</option>
-                        </select>
-                        <input type="text" placeholder="Exemple: Oracle Database, MySQL, ML, IA .." value = {this.state.option}/>
-                        <h1 className="update-profile-image-title">Ajouter une description du profile</h1>
-                        <textarea  placeholder="Etudiant à l'Ecole Nationale Supérieure d'Informatique et d'Analyse des Systèmes filière BI, à la recherche d'un stage de fin de deuxième année en développment mobile.." ></textarea>
-
-                        <input className="validateupdatingprofile" type="submit" value="Valider les données" onClick={(e)=>this._handleSubmit(e)}/>
+                    <div className="h5 mt-4">
+                      <i className="ni business_briefcase-24 mr-2" />
+                      Solution Manager - Creative Tim Officer
                     </div>
-                </div>
-            </div>
-            <h1 className="update-profile-footer"></h1>
-        </div>
-      );
-    }
+                    <div>
+                      <i className="ni education_hat mr-2" />
+                      University of Computer Science
+                    </div>
+                    <hr className="my-4" />
+                    <p>
+                      Ryan — the name taken by Melbourne-raised, Brooklyn-based
+                      Nick Murphy — writes, performs and records all of his own
+                      music.
+                    </p>
+                  </div>
+                  <div class="text-center">
+                  <Button
+                      className="float"
+                      color="danger"
+                      href="#pablo"
+                      onClick={e => e.preventDefault()}
+                      size="sm"
+                    >
+                      Delete Profile
+                    </Button>
+                    </div>
+                </CardBody>
+              </Card>
+                   
+                    <div className="pl-lg-4 card-margin-top">
+                      <FormGroup>
+                        <label>Update image</label>
+                        <form >
+                            <input className="fileInput" 
+                                type="file" 
+                                onChange={(e)=>this._handleImageChange(e)} />
+                        </form>
+                        <div className="imgPreview">
+                            {}
+                        </div>
+                      </FormGroup>
+                    </div>
+            </Col>
+            <Col className="order-xl-1" xl="8">
+              <Card className="bg-secondary shadow">
+                <CardHeader className="bg-white border-0">
+                  <Row className="align-items-center">
+                    <Col xs="8">
+                      <h3 className="mb-0">My account</h3>
+                    </Col>
+                    <Col className="text-right" xs="4">
+                      <Button
+                        color="primary"
+                        href="#pablo"
+                        onClick={e => e.preventDefault()}
+                        size="sm"
+                      >
+                        discard changes
+                      </Button>
+                    </Col>
+                  </Row>
+                </CardHeader>
+                <CardBody>
+                  <Form>
+                    <h6 className="heading-small text-muted mb-4">
+                      User information
+                    </h6>
+                    <div className="pl-lg-4">
+                      <Row>
+                        <Col lg="6">
+                          <FormGroup>
+                            <label
+                              className="form-control-label"
+                              htmlFor="input-username"
+                            >
+                              Username
+                            </label>
+                            <Input
+                              className="form-control-alternative"
+                              defaultValue="lucky.jesse"
+                              id="input-username"
+                              placeholder="Username"
+                              type="text"
+                            />
+                          </FormGroup>
+                        </Col>
+                        <Col lg="6">
+                          <FormGroup>
+                            <label
+                              className="form-control-label"
+                              htmlFor="input-email"
+                            >
+                              Email address
+                            </label>
+                            <Input
+                              className="form-control-alternative"
+                              id="input-email"
+                              placeholder="jesse@example.com"
+                              type="email"
+                            />
+                          </FormGroup>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col lg="6">
+                          <FormGroup>
+                            <label
+                              className="form-control-label"
+                              htmlFor="input-first-name"
+                            >
+                              First name
+                            </label>
+                            <Input
+                              className="form-control-alternative"
+                              defaultValue="Lucky"
+                              id="input-first-name"
+                              placeholder="First name"
+                              type="text"
+                            />
+                          </FormGroup>
+                        </Col>
+                        <Col lg="6">
+                          <FormGroup>
+                            <label
+                              className="form-control-label"
+                              htmlFor="input-last-name"
+                            >
+                              Last name
+                            </label>
+                            <Input
+                              className="form-control-alternative"
+                              defaultValue="Jesse"
+                              id="input-last-name"
+                              placeholder="Last name"
+                              type="text"
+                            />
+                          </FormGroup>
+                        </Col>
+                      </Row>
+                    </div>
+                    <hr className="my-4" />
+                    {/* Address */}
+                    <h6 className="heading-small text-muted mb-4">
+                      Contact information
+                    </h6>
+                    <div className="pl-lg-4">
+                      <Row>
+                        <Col md="12">
+                          <FormGroup>
+                            <label
+                              className="form-control-label"
+                              htmlFor="input-address"
+                            >
+                              Address
+                            </label>
+                            <Input
+                              className="form-control-alternative"
+                              defaultValue="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09"
+                              id="input-address"
+                              placeholder="Home Address"
+                              type="text"
+                            />
+                          </FormGroup>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col lg="4">
+                          <FormGroup>
+                            <label
+                              className="form-control-label"
+                              htmlFor="input-city"
+                            >
+                              City
+                            </label>
+                            <Input
+                              className="form-control-alternative"
+                              defaultValue="New York"
+                              id="input-city"
+                              placeholder="City"
+                              type="text"
+                            />
+                          </FormGroup>
+                        </Col>
+                        <Col lg="4">
+                          <FormGroup>
+                            <label
+                              className="form-control-label"
+                              htmlFor="input-country"
+                            >
+                              Country
+                            </label>
+                            <Input
+                              className="form-control-alternative"
+                              defaultValue="United States"
+                              id="input-country"
+                              placeholder="Country"
+                              type="text"
+                            />
+                          </FormGroup>
+                        </Col>
+                        <Col lg="4">
+                          <FormGroup>
+                            <label
+                              className="form-control-label"
+                              htmlFor="input-country"
+                            >
+                              Postal code
+                            </label>
+                            <Input
+                              className="form-control-alternative"
+                              id="input-postal-code"
+                              placeholder="Postal code"
+                              type="number"
+                            />
+                          </FormGroup>
+                        </Col>
+                      </Row>
+                    </div>
+                    <hr className="my-4" />
+                    {/* Description */}
+                    <h6 className="heading-small text-muted mb-4">About me</h6>
+                    <div className="pl-lg-4">
+                      <FormGroup>
+                        <label>About Me</label>
+                        <Input
+                          className="form-control-alternative"
+                          placeholder="A few words about you ..."
+                          rows="4"
+                          defaultValue="A beautiful Dashboard for Bootstrap 4. It is Free and
+                          Open Source."
+                          type="textarea"
+                        />
+                      </FormGroup>
+                    </div>
+                    <div class="text-center">
+                    <Button
+                      color="default"
+                      href="#pablo"
+                      onClick={e => e.preventDefault()}
+                      size="sm"
+                    >
+                      Update profile
+                    </Button>
+                    </div>
+                  </Form>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    );
+  }
 }
+
+export default Profile;
