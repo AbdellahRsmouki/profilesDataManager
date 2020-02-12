@@ -9,6 +9,8 @@ import "../../node_modules/slick-carousel/slick/slick.css";
 import "../../node_modules/slick-carousel/slick/slick-theme.css";
 
 import SliderArrow from '../components/SliderArrow'
+import { Card } from 'reactstrap';
+
 
 export default class events extends Component {
 
@@ -46,22 +48,22 @@ export default class events extends Component {
     }
 
     return (
-      <div className="main">
-          <section className="services">
-            <Title title="Coming Events"/>
-            <Slider {...sliderSettings}>
-                    {
-                        this.state.Services.map((item, index) => {
-                            return <article key={index} className="service">
-                                <span className="event-img">{item.icon}</span>
-                                <h6>{item.title}</h6>
-                                <p>{item.info}</p>
-                            </article>
-                        })
-                    }
-            </Slider>
-        </section>
-      </div>
+        <Card className="main card-profile shadow card-margin-top">
+                <section className="services">
+                <Title title="Coming Events"/>
+                <Slider {...sliderSettings}>
+                        {
+                            this.state.Services.map((item, index) => {
+                                return <article key={index} className="service">
+                                    <span className="event-img">{item.icon}</span>
+                                    <h6>{item.title}</h6>
+                                    <p>{item.info}</p>
+                                </article>
+                            })
+                        }
+                </Slider>
+            </section>
+        </Card>
     )
   }
 }
