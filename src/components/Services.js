@@ -3,6 +3,7 @@ import Title from './Title';
 import { FaCalendarAlt} from 'react-icons/fa';
 import {MdAccessibility, MdPersonAdd} from 'react-icons/md';
 import {GiStairsGoal} from 'react-icons/gi';
+import { Card } from 'reactstrap';
 
 export default class Services extends Component {
     state={
@@ -31,20 +32,22 @@ export default class Services extends Component {
     }
     render() {
         return (
+            <Card className="main card-profile shadow card-margin-top">
             <section className="services">
-            <Title title="Services"/>
-            <div className="services-center">
-                {
-                    this.state.Services.map((item, index) => {
-                        return <article key={index} className="service">
-                            <span>{item.icon}</span>
-                            <h6>{item.title}</h6>
-                            <p>{item.info}</p>
-                        </article>
-                    })
-                }
-            </div>
-            </section>
+                <Title title="Services"/>
+                <div className="services-center">
+                    {
+                        this.state.Services.map((item, index) => {
+                            return <article key={index} className="service">
+                                <span>{item.icon}</span>
+                                <h6>{item.title}</h6>
+                                <p>{item.info}</p>
+                            </article>
+                        })
+                    }
+                </div>
+                </section>
+            </Card>
         )
     }
 }

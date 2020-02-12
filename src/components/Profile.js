@@ -12,7 +12,7 @@ export default function Profile({profile}) {
     return (
         <article className="room">
             <div className="img-container">
-                <img src={image?image:defaultProfileImg} alt={defaultImg}/>
+                <img src={defaultProfileImg} alt={defaultImg}/>
                 <div className="price-top">
                     <p>promo {promo}</p>
                 </div>  
