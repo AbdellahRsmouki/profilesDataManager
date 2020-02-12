@@ -11,7 +11,7 @@ describe("companies context", ()=>{
 
         var good = true;
         const testStateVars = (featuredCompanies, companies, ville, specialite) => {
-            if((companies.length === 0) || !(featuredCompanies.length !== 3) || ville!=='all' || specialite!=='all')
+            if((companies.length === 0) || !(featuredCompanies.length !== 2) || ville!=='all' || specialite!=='all')
                 good = false;
         }
 
