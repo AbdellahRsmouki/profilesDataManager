@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
-
-// import dafaultBcg from '../images/room-1.jpeg'
+import React, { Component } from 'react';
+import dafaultImg from '../images/company_background.jpg'
 import Hero from '../components/Hero';
 import Banner from '../components/Banner'
 import StyledHero from '../components/StyledHero';
@@ -11,6 +10,8 @@ import {CompaniesContext} from '../CompaniesContext'
 import FooterPage from '../components/Footer';
 
 import { MDBIcon, MDBBtn, MDBContainer} from 'mdbreact';
+
+import { Card } from 'react-bootstrap';
 
 
 export default class SingleCompany extends Component {
@@ -44,7 +45,7 @@ export default class SingleCompany extends Component {
         const mainImg = image;
         return (
             <>
-                <StyledHero img={mainImg}>
+                <StyledHero img={dafaultImg}>
                     <Banner title={`${nom}`}>
                         <Link to='/companies' className="btn-primary">
                         Back to companies
@@ -58,29 +59,36 @@ export default class SingleCompany extends Component {
                         })*/}
                     </div>
                     <div className="single-room-info">
-                        <article className="desc">
+                        <article className="desc big-card-margin-top">
                             <h3>Details</h3>
                             <p>{details}</p>
                         </article>
                         <article className="info">
-                            <h3>Infos</h3>
-                            <h6>Fondee en : {fondee}</h6>
-                            <h6>size: {taille}</h6>
-                            <h6>specialite: {specialite}</h6>
-                            <h6>Location: {
-                            `${ville}, ${pays}`}
-                            </h6>
-                            <ul className="links">
-                                <MDBContainer>
-                                    <MDBBtn social="comm" href={site_web}>
-                                        <MDBIcon icon="comments" className="pr-1" /> SiteWeb
-                                    </MDBBtn>
-                                    <MDBBtn social="li" href={linkedIn}>
-                                        <MDBIcon fab icon="linkedin-in" className="pr-1" /> 
-                                            Linkedin
-                                    </MDBBtn>
-                                </MDBContainer>
-                            </ul>
+                        <Card style={{ width: '30rem' ,padding: '5px'}}>
+                            <Card.Img variant="top" src={mainImg} alt="holder.js/100x180?auto=yes" />
+                            <Card.Body>
+                                <Card.Title>Infos</Card.Title>
+                                <Card.Text>
+                                    <h6>Fondee en : {fondee}</h6>
+                                    <h6>size: {taille}</h6>
+                                    <h6>specialite: {specialite}</h6>
+                                    <h6>Location: {
+                                    `${ville}, ${pays}`}
+                                    </h6>
+                                </Card.Text>
+                                <ul className="links">
+                                    <MDBContainer>
+                                        <MDBBtn social="comm" href={site_web}>
+                                            <MDBIcon icon="comments" className="pr-1" /> SiteWeb
+                                        </MDBBtn>
+                                        <MDBBtn social="li" href={linkedIn}>
+                                            <MDBIcon fab icon="linkedin-in" className="pr-1" /> 
+                                                Linkedin
+                                        </MDBBtn>
+                                    </MDBContainer>
+                                </ul>
+                            </Card.Body>
+                        </Card>
                         </article>
                     </div>
                 </section>
@@ -88,8 +96,10 @@ export default class SingleCompany extends Component {
                 <h6>Keywords : </h6>
                 <ul className="extras">
                     {keywords?keywords.split(",").map((item,index) => {
-                        return  <li disabled="0" social="yt" key={index}> {item} </li>
-                        }):<MDBBtn>No keywords mentioned</MDBBtn>}
+                        return  <MDBBtn outline color="default" disabled="true" rounded size="sm" type="submit" className="mr-auto" key={index}>
+                                     {item}
+                                </MDBBtn>
+                        }):<MDBBtn outline color="default" disabled="true" rounded size="sm" type="submit" className="mr-auto">No keywords mentioned</MDBBtn>}
                 </ul>
                 </section>
                 <FooterPage />
