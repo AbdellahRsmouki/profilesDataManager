@@ -25,7 +25,7 @@ npm start
 * Note 2 : We had used two libraries for the design purpuse : reactstrap and mdbootstrap
 * Note 3 : We had created some tests for the main services in the app, the run them use :
 ```
-npm start
+npm test
 ```
 * Note 4 : There is a non used function for retreiving data from the api, we didn't use it during the developement period because we were using fake data. 
 
@@ -40,5 +40,7 @@ npm start
  * [Mobile application](https://github.com/AbdellahRsmouki/ENSIAS-Force)
  * [Node JS API](not imported yet)
  * [Admin Web Application](https://github.com/AbdellahRsmouki/ENSIASGATEAdmin)
+ 
+
  
   
