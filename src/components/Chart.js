@@ -13,7 +13,6 @@ class Chart extends Component{
     displayTitle:true,
     displayLegend: true,
     legendPosition:'right',
-    location:'City'
   }
 
   render(){
@@ -24,7 +23,7 @@ class Chart extends Component{
           options={{
             title:{
               display:this.props.displayTitle,
-              text:'Largest Cities In '+this.props.location,
+              text:'number of Jobs by location',
               fontSize:25
             },
             legend:{
@@ -47,14 +46,14 @@ class Chart extends Component{
               position:this.props.legendPosition
             }
           }}
-        />*/}
+        />
 
         <Pie
           data={this.state.chartData}
           options={{
             title:{
               display:this.props.displayTitle,
-              text:'Largest Cities In '+this.props.location,
+              text:'number of by Jobs ',
               fontSize:25
             },
             legend:{
@@ -63,6 +62,7 @@ class Chart extends Component{
             }
           }}
         />
+        */}
       </div>
     )
   }

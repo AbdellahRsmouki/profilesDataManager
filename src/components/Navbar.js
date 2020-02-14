@@ -52,7 +52,7 @@ export default class Navbar extends Component {
                     </ul>
                     <ul class="nav-links show-nav">
                         <div>
-                            <Link  to="/auth">S'authentifier</Link>
+                            <Link  to="/auth">Login/SignUp</Link>
                         </div>
                             {/*<li>
                                 <Link onClick={this.logout}  to="/auth">Sign out</Link>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import defaultImg from '../images/room-1.jpeg';
+import defaultImg from '../images/profile_background.png';
 
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
