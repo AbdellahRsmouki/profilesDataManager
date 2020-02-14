@@ -43,5 +43,16 @@ npm test
  
 ![Screenshot (64)](https://user-images.githubusercontent.com/38771325/74561132-4f121680-4f68-11ea-813e-3cc1f6e69488.png)
 
+---
+
+ ![Screenshot (64)](https://user-images.githubusercontent.com/38771325/74561132-4f121680-4f68-11ea-813e-3cc1f6e69488.png)
  
+ ---
+
+![Screenshot (67)](https://user-images.githubusercontent.com/38771325/74561514-fb53fd00-4f68-11ea-8e7b-aa5483e4bfe2.png)
+
+---
+
+![Screenshot (60)](https://user-images.githubusercontent.com/38771325/74561526-0575fb80-4f69-11ea-94ea-74f5c44464e8.png)
+
   
