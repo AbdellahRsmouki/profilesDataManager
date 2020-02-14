@@ -68,6 +68,16 @@ class ProfilesProvider extends Component {
             return "No profile found";
         return profile;
     }
+    getProfileByFilter = (slug) =>{
+        let tempProfiles = [...this.state.profiles];
+        let _slug = slug;
+        const profiles = tempProfiles.filter(profile =>{
+            return profile.nom.toLowerCase().indexOf(_slug.toLowerCase()) >=0
+        }).slice(0, 2)
+        if (profiles === undefined)
+            return "No profile found";
+        return profiles;
+    }
 
     handleChange = event =>{
         const target = event.target;
@@ -117,7 +127,8 @@ class ProfilesProvider extends Component {
                 value={{
                     ...this.state,
                     getProfile: this.getProfile,
-                    handleChange: this.handleChange
+                    handleChange: this.handleChange,
+                    getProfileByFilter: this.getProfileByFilter
                 }}>
                 {this.props.children}
             </ProfileContext.Provider>
